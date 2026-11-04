@@ -1,0 +1,16 @@
+# Approximate union of imports; install appropriate versions for your environment.
+numpy
+pandas
+pyarrow
+scipy
+scikit-learn
+matplotlib
+joblib
+lightgbm
+catboost
+xgboost
+optuna
+shap
+torch
+# Optional for the architecture benchmark:
+# interpret
