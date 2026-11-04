@@ -1,35 +1,164 @@
-# MIMIC-IV ICU Transfer Prediction — Research Code Archive
+# Predicting ICU Transfer from Hospital Data
 
-A code-only collection of the renal ICU-transfer project and subsequent hospital-wide, competing-risk, binary neural, feature-engineering, and dynamic landmark experiments.
+### A MIMIC-IV research project exploring early warning, renal-risk modeling, and dynamic clinical prediction
 
-## Layout
+This repository contains a series of retrospective machine-learning experiments investigating whether routinely collected hospital information can help estimate the risk of **subsequent intensive care unit (ICU) transfer**. The work began with a renal-focused cohort and expanded into hospital-wide modeling, alternative outcome definitions, competing-risk approaches, and repeated predictions at clinical landmarks.
 
-- `src/early_renal/phases/`: original renal phases, audits, subgroup evaluation, tuning and competing risks.
-- `src/early_renal/experiments/`: supporting benchmarks and comparisons.
-- `src/early_renal/masters/`: distinct versions of the renal master experiment (kept when their contents differ).
-- `src/hospital_wide/phases/`: later hospital-wide and renal-subgroup model experiments.
-- `src/hospital_wide/experiments/`: supporting benchmarks.
-- `src/dynamic/`: dynamic renal landmark pilot.
-- `tools/`: local packaging and extraction utilities.
-- `notebooks/`: notebook with cleared outputs.
-- `CODE_INVENTORY.json`: source-to-destination mapping and checksums.
-- `CLEANUP_REPORT.md`: deduplication and quality checks.
+The central question is straightforward: **what can be predicted using only information that would have been available at the time of prediction?** Answering it requires more than fitting a classifier. The experiments also examine cohort eligibility, temporal feature availability, patient-level data separation, calibration, and the impact of discharge and death on outcome interpretation.
 
-## Important
+> **Research status:** This is an experimental code archive, **not** a deployed clinical tool or a fully reproduced benchmark. The scripts have not been validated end to end in their reorganized layout. No clinical use is intended.
 
-This repository intentionally contains **no MIMIC-IV data, feature tables, predictions, trained models or evaluation labels**. Obtain MIMIC-IV access independently and use only approved storage.
+## Research at a glance
 
-These are **historical experiment scripts**, not one unified, tested package. Some scripts require other scripts on `PYTHONPATH` or in the same working directory; their original CLI paths and expected output filenames were deliberately not changed. To reproduce a stage, inspect `python path/to/script.py --help`, and point arguments to the corresponding local authorized dataset/phase outputs.
+| Dimension | Scope |
+| --- | --- |
+| Data source | MIMIC-IV (access-controlled clinical data) |
+| Prediction task | Future ICU transfer following a hospital-based prediction landmark |
+| Initial focus | Retrospectively identified renal-risk population |
+| Expanded scope | Hospital-wide and renal-subgroup experiments |
+| Approaches explored | Tree-based ML, neural baselines, tuning, ablation, competing risks, dynamic landmarks |
+| Evaluation explored | AUROC, AUPRC, calibration, subgroup analysis, explainability |
+| Deliverable | Research scripts, a walkthrough notebook, and experiment documentation |
 
-The original renal cohorts and later hospital-wide cohorts have different eligibility/label policies and sometimes different patient splits. Their reported metrics must not be directly compared without harmonization. Feature availability, cached-lab provenance, competing-risk interval definitions, and repeated validation-set inspection remain open methodological issues. This code is retrospective research only, not clinical decision support.
+## Why this problem matters
 
-## Setup
+Clinical deterioration can occur after hospital admission, before an ICU transfer takes place. Risk estimates may be useful to study how early warning systems could support prioritization and review. But retrospective predictive performance alone does **not** establish clinical usefulness: predictions must be available at the right time, calibrated for the intended population, and evaluated under realistic deployment conditions.
+
+This project therefore treats **time, cohort definition, and outcome definition** as first-class modeling decisions.
+
+## Research workflow
+
+```text
+MIMIC-IV (authorized local access)
+             |
+             v
+   Cohort and landmark definition
+             |
+             v
+  Time-constrained feature assembly
+  (labs, history, medications, etc.)
+             |
+             v
+     Patient-disjoint data splits
+             |
+             v
+  Model training and comparison
+             |
+             v
+ Discrimination / calibration / subgroups
+             |
+             v
+  Exploratory extensions:
+  competing risks + dynamic landmarks
+```
+
+This diagram summarizes the research themes; it is **not** a single tested command-line pipeline.
+
+## What was investigated
+
+### 1. Early renal-focused prediction
+
+The initial experiments construct a retrospective renal cohort and study ICU transfer after a fixed prediction landmark. They cover cohort assembly, time-bounded laboratory features, model fitting, calibration, feature selection, explainability, and subgroup assessment.
+
+A key methodological caveat is that a cohort defined using hospital diagnosis codes can incorporate diagnoses documented **after** the prediction landmark. That makes the original renal cohort suitable for retrospective investigation but not automatically equivalent to a prospectively identifiable screening population.
+
+### 2. Broader cohorts and model comparisons
+
+Later experiments extend beyond the initial renal cohort, investigate additional clinical features, compare model families, and explore tuning and feature ablation. These scripts do not necessarily share identical eligibility criteria, labels, or splits; results from different phases should **not** be compared as though they came from a single benchmark.
+
+### 3. Competing events and dynamic prediction
+
+Discharge and death can prevent an ICU transfer from being observed within a prediction window. The repository includes exploratory competing-risk formulations alongside binary models. It also includes a dynamic renal pilot that updates predictions at multiple landmarks.
+
+These formulations answer related but **different** statistical questions. Repeated predictions from the same patient also require appropriate handling when estimating uncertainty.
+
+## Repository map
+
+```text
+.
+├── src/
+│   ├── early_renal/
+│   │   ├── phases/          # Initial renal pipeline and later phase scripts
+│   │   ├── experiments/     # Comparisons and supporting analyses
+│   │   └── masters/         # Distinct retained master-script versions
+│   ├── hospital_wide/
+│   │   ├── phases/          # Expanded cohort and modeling experiments
+│   │   └── experiments/     # Supporting benchmarks
+│   └── dynamic/             # Repeated-landmark renal pilot
+├── notebooks/
+│   └── renal_icu_end_to_end_explained.ipynb
+├── tools/                    # Packaging and extraction utilities
+├── requirements.txt         # Approximate, unpinned dependency list
+├── CODE_INVENTORY.json      # Source mapping and checksums
+└── CLEANUP_REPORT.md        # Deduplication and cleanup notes
+```
+
+**Where to start:** Read the [walkthrough notebook](notebooks/renal_icu_end_to_end_explained.ipynb) for a guided tour, then explore `src/early_renal/phases/` for the original experiments. The notebook's outputs have been cleared; it has not been verified as a one-click reproducible run.
+
+## Getting started
+
+### Prerequisites
+
+- Python and a suitable local environment for scientific computing
+- Authorized access to the required MIMIC-IV tables and any derived inputs
+- Sufficient storage and compute resources for the experiments you choose to run
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+```
+
+The dependency list is an **approximate union of imports**, not a pinned, tested environment. Some scripts may need additional packages or compatible versions.
+
+To inspect an individual script's interface:
+
+```bash
+python src/early_renal/phases/phase1_cohort.py --help
+```
+
+Not every historical script is guaranteed to expose the same CLI or run independently. Some still assume legacy paths, filenames, working directories, or sibling scripts. Review its source and required input tables before running it. A syntax-only check can be performed with:
+
+```bash
 python -m compileall -q src tools
 ```
 
-For safety, run `git status` and inspect staged files before any push. The `.gitignore` is defense-in-depth, not a substitute for checking that restricted data is absent.
+**Passing compilation does not mean the experiments run successfully.** The reorganized repository has not undergone full integration testing against MIMIC-IV.
+
+## Data access and privacy
+
+MIMIC-IV is a controlled-access clinical dataset. **No patient-level data, feature tables, labels, trained model artifacts, or prediction exports are included in this repository.** Obtain access through the dataset's official process and follow its data-use conditions. Keep restricted inputs and outputs outside version control and in approved storage.
+
+## Evaluation and reproducibility
+
+The code explores discrimination (including AUROC and AUPRC), calibration, explainability, and subgroup analyses. **This README intentionally reports no headline performance number:** the archive does not contain a single verified final evaluation with a unified cohort, label policy, and held-out test protocol.
+
+Before treating any experiment as a reproducible research result, the following need to be established:
+
+1. A prospectively identifiable prediction population and clearly defined landmark.
+2. A harmonized outcome definition, including treatment of discharge and death.
+3. Verification that all predictor values were available by prediction time.
+4. Fixed patient-disjoint development and evaluation partitions, with appropriate uncertainty estimates.
+5. A pinned environment, executable end-to-end workflow, and automated tests.
+6. Independent temporal or external validation before any clinical interpretation.
+
+## Known limitations
+
+- **Potential future-informed cohort selection:** Retrospective renal diagnosis codes may reflect information acquired after the landmark.
+- **Outcome heterogeneity:** Some experiments exclude early competing events; others handle them differently.
+- **Temporal availability:** Laboratory timestamps receive explicit attention in parts of the code, but all feature families need a consistent availability audit.
+- **Multiple experiments:** Cohorts, splits, and model-selection decisions vary across phases; the archive does not designate one final model.
+- **Validation:** There is no demonstrated external validation or completed end-to-end reproduction of the reorganized repository.
+- **Research-only status:** Predictive metrics, even if reproduced, would not establish clinical safety or utility.
+
+## Project history
+
+The repository preserves a chronological reconstruction of research milestones based on file modification metadata from an earlier archive. **Historical author dates are estimates of file development activity; the Git commits themselves were created during repository reconstruction.** The later organization and documentation changes are separate from the original experiments.
+
+## Acknowledgment
+
+This work uses the MIMIC-IV research ecosystem. Users should consult the official MIMIC-IV documentation for access requirements, dataset versions, and citation instructions. This repository is independent research code and is not affiliated with the dataset maintainers.
+
+---
+
+**Status:** Exploratory retrospective clinical ML research · **Intended audience:** Researchers and technical reviewers · **Not for clinical decision-making**
