@@ -1,6 +1,6 @@
 # Explainable Boosting Machine (EBM) experiments
 
-This folder contains the EBM training scripts supplied for the renal ICU-transfer research experiments. Aggregate metrics, figures, and interpretation notes are stored in [`08_results/ebm_experiments`](../../08_results/ebm_experiments/README.md).
+This folder contains the EBM training scripts supplied for the renal ICU-transfer research experiments. Aggregate metrics and experiment notes are indexed in [EBM results](../../08_results/ebm_experiments/README.md); the associated plots are stored under [08_results](../../08_results/).
 
 ## Scripts
 

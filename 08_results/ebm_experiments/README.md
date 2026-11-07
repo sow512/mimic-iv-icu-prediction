@@ -1,6 +1,6 @@
 # EBM experiment archive
 
-This collection records the Explainable Boosting Machine (EBM) experiments supplied in the EBM archive. Training scripts are indexed in [03_model_training/EBM](../../03_model_training/EBM/README.md); a consolidated aggregate test-metrics table is stored here. Original experiment folder names are retained in the index. The ZIP also contains PNG figures, but the connected GitHub file-writing interface accepted text files only, so those binary images have not been uploaded.
+This collection records the Explainable Boosting Machine (EBM) experiments supplied in the EBM archive. Training scripts are indexed in [03_model_training/EBM](../../03_model_training/EBM/README.md); a consolidated aggregate test-metrics table is stored here. Original experiment folder names are retained in the index. The experiment PNG figures have since been uploaded to `08_results/` in their original experiment folders. The table below links the aggregate summaries; browse the experiment folders for plots.
 
 ## Included experiments
 

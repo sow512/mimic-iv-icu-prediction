@@ -80,16 +80,16 @@ The numbered directories are the canonical team workflow. Research scripts have 
 |---|---|
 | [01_data_preprocessing](01_data_preprocessing/) | Team preprocessing and renal research cohort/feature builders |
 | [02_feature_selection](02_feature_selection/) | Team feature selection and renal feature-selection experiments |
-| [03_model_training](03_model_training/) | XGBoost, tree ensembles, neural networks, competing risks, dynamic models, EBM experiments, and archived research experiments |
+| [03_model_training](03_model_training/) | XGBoost, EBM, tree ensembles, neural networks, competing risks, dynamic models, and research experiments |
 | [04_model_analysis](04_model_analysis/) | Calibration, validation, explainability, and ablation scripts |
 | [05_icu_optimization](05_icu_optimization/) | ICU allocation and simulation work |
 | [06_streamlit_frontend](06_streamlit_frontend/) | Interactive application |
 | [07_validation](07_validation/) | Team verification and validation scripts |
-| [08_results](08_results/) | Non-sensitive aggregate results, including the EBM experiment archive |
+| [08_results](08_results/) | Aggregate results, figures, and experiment-specific documentation |
 | [src](src/) | Navigation index and file move map; no duplicate model source |
 | [notebooks](notebooks/) | Research walkthrough notebook (historical paths may need updating) |
 
-**Where to start:** See [src/MOVE_MAP.md](src/MOVE_MAP.md) for each original phase script and its canonical location. The EBM experiment scripts are indexed in [03_model_training/EBM](03_model_training/EBM/README.md), with aggregate summaries in [08_results/ebm_experiments](08_results/ebm_experiments/README.md). The original notebook remains a historical walkthrough and is not a verified runnable pipeline.
+**Where to start:** See [src/MOVE_MAP.md](src/MOVE_MAP.md) for each original phase script and its canonical location. The original notebook remains a historical walkthrough and is not a verified runnable pipeline.
 
 ## Getting started
 
@@ -124,7 +124,7 @@ python -m compileall -q 01_data_preprocessing 02_feature_selection 03_model_trai
 
 ## Results and figures
 
-Browse the [curated aggregate results and nine-figure gallery](08_results/README.md), including model discrimination, calibration, SHAP feature attribution, hypothetical event capture, and Phase 30 neural-network diagnostics. The EBM experiment archive is separately indexed in [08_results/ebm_experiments](08_results/ebm_experiments/README.md). Figures come from different experiments and should not be interpreted as a single matched leaderboard.
+Browse the [curated aggregate results and nine-figure gallery](08_results/README.md), including model discrimination, calibration, SHAP feature attribution, hypothetical event capture, and Phase 30 neural-network diagnostics. Figures come from different experiments and should not be interpreted as a single matched leaderboard.
 
 ## Data access and privacy
 

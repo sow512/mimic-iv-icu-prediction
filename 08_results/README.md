@@ -1,4 +1,6 @@
-# Curated renal-cohort results
+# Model results and figures
+
+This directory contains aggregate model results and visualizations from multiple team experiments. For EBM results and plots, see the [EBM experiment index](ebm_experiments/README.md). The other tables below cover renal-cohort and neural-model experiments; their metrics should not be combined into a single leaderboard.
 
 **Aggregate metrics only.** Do not commit MIMIC-IV records, individual prediction files, derived patient-level feature tables, trained weights, or patient-level SHAP explanations.
 
