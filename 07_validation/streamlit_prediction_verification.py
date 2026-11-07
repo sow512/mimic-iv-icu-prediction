@@ -1,6 +1,7 @@
 """Step 72: Independently reproduce Streamlit inference and compare Step 54 scores.
 Uses existing local MIMIC-IV artifacts only. No model training.
 """
+import os
 from pathlib import Path
 import json
 import numpy as np
@@ -9,7 +10,7 @@ import joblib
 from xgboost import XGBClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score, f1_score
 
-PROJECT = Path(r'C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV')
+PROJECT = Path(os.environ["MIMIC_PROJECT_ROOT"])
 BASE = PROJECT / 'model training figures' / 'expanded_lab_xgboost'
 MODEL_DIR = BASE / 'step53_final_75_model'
 SAMPLE_DIR = PROJECT / 'ICU_STREAMLIT_APP' / 'real_patient_test_samples'

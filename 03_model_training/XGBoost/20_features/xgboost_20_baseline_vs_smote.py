@@ -4,6 +4,7 @@
 # Complete corrected standalone script
 # ============================================================
 
+import os
 from pathlib import Path
 import json
 import joblib
@@ -41,7 +42,7 @@ from xgboost import XGBClassifier
 # ============================================================
 
 PROJECT = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 TRAIN_FILE = PROJECT / "kidney_final_train_dataset.csv"

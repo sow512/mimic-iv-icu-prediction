@@ -14,7 +14,7 @@ This folder contains the final Streamlit dashboard developed for predicting ICU 
 
 | File | Description |
 |---|---|
-| `staylength.py` | Final Streamlit application integrating prediction, explainability and ICU capacity simulation. |
+| `app.py` | Final Streamlit application integrating prediction, explainability and ICU capacity simulation. |
 | `requirements.txt` | Python dependencies required to run the application. |
 
 ## Running the Application
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 Launch the dashboard:
 
 ```bash
-streamlit run staylength.py
+streamlit run 06_streamlit_frontend/app.py
 ```
 
 The application requires the frozen Step 53 XGBoost model, preprocessing bundle and metadata files, which must be supplied locally by authorized users.

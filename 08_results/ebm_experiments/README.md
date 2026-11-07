@@ -1,6 +1,23 @@
 # EBM experiment archive
 
-This collection records the Explainable Boosting Machine (EBM) experiments supplied in the EBM archive. Training scripts are indexed in [03_model_training/EBM](../../03_model_training/EBM/README.md); a consolidated aggregate test-metrics table is stored here. Original experiment folder names are retained in the index. The ZIP also contains PNG figures, but the connected GitHub file-writing interface accepted text files only, so those binary images have not been uploaded.
+This collection records the Explainable Boosting Machine (EBM) experiments supplied in the EBM archive. Training scripts are indexed in [03_model_training/EBM](../../03_model_training/EBM/README.md); a consolidated aggregate test-metrics table is stored here. Original experiment folder names are retained in the index. The experiment PNG figures are organized under [`figures/`](figures/) by their original experiment folder names.
+
+
+## Figure directories
+
+All EBM figures are grouped under [figures/](figures/) rather than scattered across the top-level results folder. Original experiment folder names and filenames are retained for provenance.
+
+| Experiment | Figures |
+|---|---|
+| 20 features | [EBM_20features](figures/EBM_20features/) |
+| 75 features | [EBM_75](figures/EBM_75/) |
+| Tuned 75 features | [EBM_75_Tuned](figures/EBM_75_Tuned/) |
+| Tuned 75 + SMOTE | [EBM_75_SMOTE(Tuned)](figures/EBM_75_SMOTE(Tuned)/) |
+| 200 features | [EBM_200](figures/EBM_200/) |
+| 75-feature SMOTE comparison | [EBM_SMOTE75](figures/EBM_SMOTE75/) |
+| 200-feature SMOTE comparison | [EBM_SMOTE_200](figures/EBM_SMOTE_200/) |
+
+These are historical experiment outputs. The figures do not establish matched performance comparisons across different cohort definitions.
 
 ## Included experiments
 

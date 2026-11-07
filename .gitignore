@@ -36,3 +36,9 @@ venv/
 outputs/
 results/
 checkpoints/
+
+# Local inputs and exports (never commit restricted datasets)
+local_mimic_data/
+local_data/
+*.xlsx
+*.xls
