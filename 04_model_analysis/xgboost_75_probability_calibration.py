@@ -5,6 +5,7 @@
 # Patient-grouped CV + Platt + Isotonic
 # ============================================================
 
+import os
 from pathlib import Path
 import json
 import joblib
@@ -32,7 +33,7 @@ from xgboost import XGBClassifier, DMatrix
 # ============================================================
 
 PROJECT = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 SOURCE = (

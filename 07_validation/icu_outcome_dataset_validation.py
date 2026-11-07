@@ -4,13 +4,14 @@
 # Does NOT retrain models or overwrite previous files.
 # ============================================================
 
+import os
 from pathlib import Path
 import json
 import pandas as pd
 import numpy as np
 
 PROJECT = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 SOURCE = PROJECT / "model training figures" / "expanded_lab_xgboost"

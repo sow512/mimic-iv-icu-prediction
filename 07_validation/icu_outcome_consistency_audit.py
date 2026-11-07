@@ -4,13 +4,14 @@
 # Read-only audit. No labels or models overwritten.
 # ============================================================
 
+import os
 from pathlib import Path
 import json
 import numpy as np
 import pandas as pd
 
 PROJECT = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 SOURCE = PROJECT / "model training figures" / "expanded_lab_xgboost"

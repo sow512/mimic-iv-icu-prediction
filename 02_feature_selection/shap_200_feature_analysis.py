@@ -2,12 +2,13 @@
 # STEP 46: ANALYZE FINAL 200 SHAP-SELECTED FEATURES
 # ============================================================
 
+import os
 from pathlib import Path
 from collections import defaultdict
 import pandas as pd
 
 PROJECT_DIR = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 MODEL_DIR = (

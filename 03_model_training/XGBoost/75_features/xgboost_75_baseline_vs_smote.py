@@ -2,6 +2,7 @@
 Requires the already-engineered 75-feature Excel workbook with dataset_split.
 Never changes the workbook or the previously trained model.
 """
+import os
 from pathlib import Path
 import json
 import warnings
@@ -20,7 +21,7 @@ from imblearn.over_sampling import SMOTENC, SMOTE
 
 # === EDIT ONLY THIS PATH IF NEEDED ===
 DATA_FILE = Path(
-    r"C:\Users\sowmy\OneDrive\Desktop\SMOTE_EXPERIMENT\75_Feature_Dataset.xlsx"
+    os.environ["ICU_75_FEATURE_WORKBOOK"]
 )
 OUT = DATA_FILE.parent / 'SMOTE_75_XGBOOST_EXPERIMENT'
 OUT.mkdir(parents=True, exist_ok=True)

@@ -1,6 +1,7 @@
 """Step 58: SHAP explanations for frozen Step 53 timing-corrected 75-feature XGBoost.
 Read-only with respect to saved model/data. Test set is previously examined: exploratory.
 """
+import os
 from pathlib import Path
 import json
 import re
@@ -14,7 +15,7 @@ from sklearn.model_selection import GroupShuffleSplit
 from sklearn.metrics import confusion_matrix
 from xgboost import XGBClassifier, DMatrix
 
-PROJECT = Path(r'C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV')
+PROJECT = Path(os.environ["MIMIC_PROJECT_ROOT"])
 SOURCE = PROJECT / 'model training figures' / 'expanded_lab_xgboost'
 MODEL_DIR = SOURCE / 'step53_final_75_model'
 FEATURE_FILE = SOURCE / 'step51_timing_corrected' / 'expanded_candidate_features_storetime_corrected.parquet'

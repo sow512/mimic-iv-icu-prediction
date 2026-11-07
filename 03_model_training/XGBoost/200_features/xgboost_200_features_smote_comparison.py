@@ -4,6 +4,7 @@
 # Original Step 44 dataset; original model untouched
 # ============================================================
 
+import os
 from pathlib import Path
 import json
 import joblib
@@ -29,7 +30,7 @@ from sklearn.metrics import (
 # ============================================================
 
 PROJECT = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 SOURCE = PROJECT / "model training figures" / "expanded_lab_xgboost"
