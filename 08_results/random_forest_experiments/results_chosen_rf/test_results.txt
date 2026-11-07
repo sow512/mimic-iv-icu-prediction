@@ -1,0 +1,16 @@
+Threshold: 0.7
+AUROC: 0.74955
+AUPRC: 0.11612
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.96      0.97    177391
+           1       0.14      0.24      0.18      4408
+
+    accuracy                           0.95    181799
+   macro avg       0.56      0.60      0.58    181799
+weighted avg       0.96      0.95      0.95    181799
+
+Confusion matrix:
+[[171001   6390]
+ [  3348   1060]]

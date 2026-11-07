@@ -1,0 +1,28 @@
+RF 200 FEATURES + SMOTE
+
+AUROC: 0.71067
+AUPRC: 0.13578
+Brier Score: 0.03498
+Precision: 0.17784
+Recall: 0.18982
+Specificity: 0.97032
+Accuracy: 0.94479
+F1: 0.18363
+NPV: 0.97254
+Balanced Accuracy: 0.58007
+FPR: 0.02968
+FNR: 0.81018
+Threshold: 0.25000
+TN: 20858.00000
+FP: 638.00000
+FN: 589.00000
+TP: 138.00000
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.97      0.97     21496
+           1       0.18      0.19      0.18       727
+
+    accuracy                           0.94     22223
+   macro avg       0.58      0.58      0.58     22223
+weighted avg       0.95      0.94      0.95     22223

@@ -1,0 +1,29 @@
+20 FEATURE RF WITHOUT SMOTE
+
+AUROC: 0.73793
+AUPRC: 0.11482
+Sensitivity / Recall: 0.00000
+Specificity: 1.00000
+Precision (PPV): 0.00000
+Accuracy: 0.96970
+F1-Score: 0.00000
+NPV: 0.96970
+Balanced Accuracy: 0.50000
+False Positive Rate: 0.00000
+False Negative Rate: 1.00000
+Brier Score: 0.02829
+Classification Threshold: 0.50000
+TN: 24193.00000
+FP: 0.00000
+FN: 756.00000
+TP: 0.00000
+
+CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     24193
+           1       0.00      0.00      0.00       756
+
+    accuracy                           0.97     24949
+   macro avg       0.48      0.50      0.49     24949
+weighted avg       0.94      0.97      0.95     24949

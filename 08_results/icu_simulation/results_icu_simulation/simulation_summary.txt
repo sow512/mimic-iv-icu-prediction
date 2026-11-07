@@ -1,0 +1,9 @@
+ICU BED ALLOCATION SIMULATION
+
+Candidates: 100
+Available beds: 10
+Actual ICU transfers: 6
+Transfers in top 10: 2
+Transfers outside top 10: 4
+Precision at 10: 0.2000
+Recall at 10: 0.3333

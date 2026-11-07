@@ -1,0 +1,53 @@
+75-FEATURE ORIGINAL XGBOOST
+
+ORIGINAL PARAMETERS:
+{'n_estimators': 250, 'max_depth': 4, 'learning_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.8, 'min_child_weight': 5, 'reg_lambda': 5, 'scale_pos_weight': 1.0, 'tree_method': 'hist', 'objective': 'binary:logistic', 'eval_metric': 'logloss', 'random_state': 42, 'n_jobs': 4}
+
+VALIDATION RESULTS:
+AUROC: 0.767209
+AUPRC: 0.180885
+Brier: 0.029673
+
+FINAL TEST RESULTS:
+Threshold                  0.032312
+Precision                  0.070054
+Recall                     0.680880
+Specificity                0.694315
+F1                         0.127037
+Balanced Accuracy          0.687598
+Accuracy                   0.693876
+Predicted Positives     7066.000000
+TN                     14925.000000
+FP                      6571.000000
+FN                       232.000000
+TP                       495.000000
+AUROC                      0.765724
+AUPRC                      0.151301
+Brier Score                0.029741
+
+CLASSIFICATION REPORT:
+              precision    recall  f1-score   support
+
+           0       0.98      0.69      0.81     21496
+           1       0.07      0.68      0.13       727
+
+    accuracy                           0.69     22223
+   macro avg       0.53      0.69      0.47     22223
+weighted avg       0.95      0.69      0.79     22223
+
+
+COMPARISON WITH TUNED MODEL:
+             Original XGBoost - New Run  Tuned XGBoost - Previous Run
+AUROC                          0.765724                      0.764776
+AUPRC                          0.151301                      0.131873
+Recall                         0.680880                      0.730399
+Specificity                    0.694315                      0.637560
+Precision                      0.070054                      0.063807
+F1                             0.127037                      0.117361
+Accuracy                       0.693876                      0.640598
+Brier Score                    0.029741                      0.030179
+Threshold                      0.032312                      0.029568
+TN                         14925.000000                  13705.000000
+FP                          6571.000000                   7791.000000
+FN                           232.000000                    196.000000
+TP                           495.000000                    531.000000

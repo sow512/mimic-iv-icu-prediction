@@ -1,0 +1,28 @@
+RF 75 FEATURES + SMOTE
+
+AUROC: 0.70704
+AUPRC: 0.10189
+Brier Score: 0.03659
+Precision: 0.12714
+Recall: 0.16369
+Specificity: 0.96199
+Accuracy: 0.93588
+F1: 0.14311
+NPV: 0.97144
+Balanced Accuracy: 0.56284
+FPR: 0.03801
+FNR: 0.83631
+Threshold: 0.25000
+TN: 20679.00000
+FP: 817.00000
+FN: 608.00000
+TP: 119.00000
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.96      0.97     21496
+           1       0.13      0.16      0.14       727
+
+    accuracy                           0.94     22223
+   macro avg       0.55      0.56      0.55     22223
+weighted avg       0.94      0.94      0.94     22223
