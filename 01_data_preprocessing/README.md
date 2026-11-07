@@ -1,1 +1,1 @@
-
+This notebook contains the initial MIMIC-IV kidney-disease cohort preparation, data preprocessing, feature engineering, and VIF/RFE-based feature selection. It represents the original workflow developed and presented during the **midterm project presentation**.
