@@ -8,7 +8,7 @@ This folder contains simulation scripts for evaluating ICU bed availability, pat
 | File | Description |
 |---|---|
 | `icu_crisis_capacity_simulation.py` | Simulates ICU demand surges, bed availability, waiting-time constraints, and risk-prioritized admissions. |
-| `make_stay_lengths.py` | Extracts historical ICU stay durations from MIMIC-IV to support resource-planning analysis. |
+| `derive_icu_stay_lengths.py` | Extracts historical ICU stay durations from MIMIC-IV to support resource-planning analysis. |
 
 ## Methodology
 

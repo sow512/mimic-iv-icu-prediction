@@ -14,3 +14,6 @@ jobs:
         run: python -m compileall -q 01_data_preprocessing 02_feature_selection 03_model_training 04_model_analysis 05_icu_optimization 06_streamlit_frontend 07_validation tools
       - name: Verify moved paths and code inventory
         run: python tools/check_repository_layout.py
+
+      - name: Reject machine-specific paths
+        run: python tools/check_portable_paths.py
