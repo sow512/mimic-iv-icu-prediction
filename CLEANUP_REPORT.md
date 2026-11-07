@@ -29,3 +29,8 @@
 - Updated the root README and code inventory to reflect canonical paths.
 - Added a static CI check for Python syntax and mapped file existence.
 - Full runtime execution and historical notebook path remediation still require an authorized MIMIC-IV environment.
+
+## Descriptive script naming
+- Renamed 38 scripts by their purpose and model family, without changing their source bytes.
+- The phase-to-filename mapping is retained in `src/MOVE_MAP.md`.
+- Imports and dataset-dependent runtime behavior have not been verified end-to-end.
