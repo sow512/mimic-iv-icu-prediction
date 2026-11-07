@@ -1,0 +1,4 @@
+partition,n_admissions,n_events,auroc,auprc,brier
+early_stop,5984,296,0.6804,0.1762,0.04432
+selection,5757,310,0.7163,0.1990,0.04766
+calibration,5841,303,0.6825,0.1740,0.04660
