@@ -6,7 +6,12 @@ import sys
 
 root = Path(__file__).resolve().parents[1]
 move_map = (root / "src" / "MOVE_MAP.md").read_text(encoding="utf-8")
-pairs = re.findall(r"^\\| \\x60([^\\x60]+)\\x60 \\| \\[\\x60([^\\x60]+)\\x60\\]", move_map, re.M)
+pairs = []
+for line in move_map.splitlines():
+    if line.startswith('| `') and '` | [`' in line:
+        old = line.split('`')[1]
+        new = line.split('`')[3]
+        pairs.append((old, new))
 errors = []
 if not pairs:
     errors.append("No moved paths parsed from src/MOVE_MAP.md")
