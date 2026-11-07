@@ -1,0 +1,60 @@
+age
+admission_hour
+admission_day
+weekend_admission
+anion_gap_latest_value
+bicarbonate_latest_value
+bun_latest_value
+calcium_latest_value
+creatinine_latest_value
+glucose_latest_value
+hematocrit_latest_value
+magnesium_latest_value
+phosphate_latest_value
+platelets_latest_value
+potassium_latest_value
+pt_latest_value
+rdw_latest_value
+sodium_latest_value
+wbc_latest_value
+glucose_count
+hematocrit_count
+inr_count
+phosphate_count
+platelets_count
+potassium_count
+anion_gap_change
+bicarbonate_change
+bun_change
+calcium_change
+chloride_change
+creatinine_change
+glucose_change
+hematocrit_change
+hemoglobin_change
+inr_change
+magnesium_change
+phosphate_change
+platelets_change
+potassium_change
+pt_change
+rdw_change
+sodium_change
+wbc_change
+gender_M
+admission_type_DIRECT EMER.
+admission_type_DIRECT OBSERVATION
+admission_type_ELECTIVE
+admission_type_EU OBSERVATION
+admission_type_OBSERVATION ADMIT
+admission_type_SURGICAL SAME DAY ADMISSION
+admission_type_URGENT
+admission_location_CLINIC REFERRAL
+admission_location_INFORMATION NOT AVAILABLE
+admission_location_INTERNAL TRANSFER TO OR FROM PSYCH
+admission_location_PACU
+admission_location_PHYSICIAN REFERRAL
+admission_location_PROCEDURE SITE
+admission_location_TRANSFER FROM HOSPITAL
+admission_location_TRANSFER FROM SKILLED NURSING FACILITY
+admission_location_WALK-IN/SELF REFERRAL

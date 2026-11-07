@@ -1,0 +1,20 @@
+admission_hour
+anion_gap_latest_value
+calcium_latest_value
+creatinine_latest_value
+glucose_latest_value
+hematocrit_latest_value
+pt_latest_value
+wbc_latest_value
+inr_count
+phosphate_count
+platelets_count
+bun_change
+wbc_change
+admission_type_DIRECT OBSERVATION
+admission_type_ELECTIVE
+admission_type_EU OBSERVATION
+admission_type_SURGICAL SAME DAY ADMISSION
+admission_type_URGENT
+admission_location_PHYSICIAN REFERRAL
+admission_location_TRANSFER FROM HOSPITAL

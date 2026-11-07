@@ -1,0 +1,17 @@
+admission_location_EMERGENCY ROOM
+pt_count
+bicarbonate_count
+wbc_count
+chloride_count
+bun_count
+rdw_count
+admission_type_EW EMER.
+anion_gap_count
+inr_latest_value
+calcium_count
+sodium_count
+hemoglobin_count
+chloride_latest_value
+creatinine_count
+hemoglobin_latest_value
+magnesium_count
