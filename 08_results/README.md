@@ -71,3 +71,10 @@ Both models give high importance to **admission type** and other administrative/
 - No claim of clinical deployment readiness or independent external validation is made.
 
 Canonical code locations: [research source index](../src/README.md).
+
+
+---
+
+## EBM experiments
+
+See the [EBM experiment archive](ebm_experiments/README.md) for aggregate metrics, methodology caveats, and the supplied experiment inventory. This is separate from the curated historical results above; do not combine metrics across the two archives as though they are from a single benchmark.
