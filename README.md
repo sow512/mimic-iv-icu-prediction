@@ -110,7 +110,7 @@ The dependency list is an **approximate union of imports**, not a pinned, tested
 To inspect an individual script's interface:
 
 ```bash
-python 01_data_preprocessing/phase1_cohort.py --help
+python 01_data_preprocessing/renal_cohort_24h_landmark.py --help
 ```
 
 Not every historical script is guaranteed to expose the same CLI or run independently. Some still assume legacy paths, filenames, working directories, or sibling scripts. Review its source and required input tables before running it. A syntax-only check can be performed with:

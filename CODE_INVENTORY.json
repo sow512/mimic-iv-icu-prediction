@@ -15,70 +15,70 @@
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase10_validate.py",
+      "path": "04_model_analysis/renal_model_validation.py",
       "source": "incoming/phase10_validate(3).py",
       "sha256": "6e5386623e926a66bc7ae2afb4abe61697cd2421c2f3e04e12f6f29cf52cf8ad",
       "bytes": 10208,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Research_Archives/experiments/phase11_admin_ablation.py",
+      "path": "03_model_training/Research_Archives/experiments/administrative_feature_ablation.py",
       "source": "incoming/phase11_admin_ablation(1).py",
       "sha256": "e55e81b4c49d899f995df304a1f468b5579e64999703ce5b6e8fac730377d32b",
       "bytes": 8820,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase12_subgroup_evaluation.py",
+      "path": "04_model_analysis/renal_subgroup_evaluation.py",
       "source": "incoming/phase12_subgroup_evaluation(1).py",
       "sha256": "75a390f505ba6a22f7b4e9fb8868d9a0a8c788caf8b4e6cc506e79df498f003c",
       "bytes": 6805,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Research_Archives/experiments/phase13_optuna_tuning.py",
+      "path": "03_model_training/Research_Archives/experiments/optuna_renal_model_tuning.py",
       "source": "incoming/phase13_optuna_tuning(2).py",
       "sha256": "e737fb5df3640d0d1aa234379e36ebd9fde8f7417fb99700bffac18094ef12e6",
       "bytes": 21006,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase14_competing_risks.py",
+      "path": "03_model_training/Competing_Risks/renal_discrete_time_competing_risks.py",
       "source": "incoming/phase14_competing_risks(2).py",
       "sha256": "8b30bdcf6e08344a150784372ba10b11454257d3e491a5b5d7b7d39bee9c1972",
       "bytes": 15080,
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase17_patient_flow_audit.py",
+      "path": "01_data_preprocessing/patient_flow_cohort_audit.py",
       "source": "incoming/phase17_patient_flow_audit(1).py",
       "sha256": "af87fc4bfb29ea19ae2974f786bb5f8bc53d9a939a320c3254734a1ad8c16e3c",
       "bytes": 13867,
       "syntax": "syntax OK"
     },
     {
-      "path": "02_feature_selection/phase8_feature_availability_audit.py",
+      "path": "02_feature_selection/feature_timestamp_availability_audit.py",
       "source": "incoming/phase8_feature_availability_audit(3).py",
       "sha256": "e841d394c00173e238856f81671b4cfca55419da7f738410c42344c75f77e895",
       "bytes": 10172,
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase9_history_omr.py",
+      "path": "01_data_preprocessing/patient_history_omr_features.py",
       "source": "incoming/phase9_history_omr(2).py",
       "sha256": "70df69bce786d66d551aae9a44c32b3d2027a35b0bad21f5e572619ecda89128",
       "bytes": 7673,
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase9b_medications_comorbidities.py",
+      "path": "01_data_preprocessing/medication_comorbidity_features.py",
       "source": "incoming/phase9b_medications_comorbidities(2).py",
       "sha256": "f5605dcddc4ffa1129f3cf520d3c36a0f001677cc530ff5bb905dfe8ab8bcf76",
       "bytes": 10928,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Tree_Ensembles/phase9c_lgbm_catboost_ablation.py",
+      "path": "03_model_training/Tree_Ensembles/clinical_feature_ablation_lgbm_catboost.py",
       "source": "incoming/phase9c_lgbm_catboost_ablation(2).py",
       "sha256": "c0690938b3fb3ad1ec97db1af61325ccc824927bb1cd60627ab088172d42feb0",
       "bytes": 13762,
@@ -113,49 +113,49 @@
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase1_cohort.py",
+      "path": "01_data_preprocessing/renal_cohort_24h_landmark.py",
       "source": "src/early_renal/phase1_cohort(2).py",
       "sha256": "7e27c872ecc440328194d84954c544651593d452d0c32a0fbf09e23bae8cdc42",
       "bytes": 7997,
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase2_labs.py",
+      "path": "01_data_preprocessing/temporal_laboratory_features.py",
       "source": "src/early_renal/phase2_labs(2).py",
       "sha256": "1ed3bdee0af506664b5f73dde2d1ceb6fb5e658d63c280f7e8ad198469e99227",
       "bytes": 8890,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Tree_Ensembles/phase3_train.py",
+      "path": "03_model_training/Tree_Ensembles/renal_lightgbm_catboost_training.py",
       "source": "src/early_renal/phase3_train(2).py",
       "sha256": "4a850d09a4d88a9e008001db1ad0411193cd36c3210285c1a71af6249463b52e",
       "bytes": 7452,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase4_calibration_diagnostics.py",
+      "path": "04_model_analysis/probability_calibration_diagnostics.py",
       "source": "src/early_renal/phase4_calibration_diagnostics(2).py",
       "sha256": "88a37b2fbe93933654ea7f608de709f4c5c06b653751dc962a76abe448b9ed25",
       "bytes": 6205,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase4b_train_calibrate.py",
+      "path": "04_model_analysis/train_and_calibrate_renal_models.py",
       "source": "src/early_renal/phase4b_train_calibrate(1).py",
       "sha256": "9d3ce5862ce70e574ac745c02176c00d7470ed15b8e2a178d01cef64c789163b",
       "bytes": 9543,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase5_shap.py",
+      "path": "04_model_analysis/renal_shap_explainability.py",
       "source": "src/early_renal/phase5_shap(2).py",
       "sha256": "1ce99dd91c03bb9732ec024e512bc98f5837c3b52325a4d1a4d60345a4f864ca",
       "bytes": 7163,
       "syntax": "syntax OK"
     },
     {
-      "path": "05_icu_optimization/phase6_allocation.py",
+      "path": "05_icu_optimization/icu_allocation_simulation.py",
       "source": "src/early_renal/phase6_allocation(1).py",
       "sha256": "ecb79656cdca88156a50bb6dd2da07ad037286b2e8f2040480023bbaa757baee",
       "bytes": 6523,
@@ -204,147 +204,147 @@
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase18_unified_flow.py",
+      "path": "01_data_preprocessing/hospitalwide_event_cohort.py",
       "source": "src/hospital_wide/phase18_unified_flow(1).py",
       "sha256": "679de324b37372563ec8d3d6b0038d0cab9a0ed88d7efdbff254b07c26b6cc3e",
       "bytes": 10239,
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase18b_feature_store.py",
+      "path": "01_data_preprocessing/hospitalwide_feature_store.py",
       "source": "src/hospital_wide/phase18b_feature_store(1).py",
       "sha256": "7c9c5ea993446c31699be5dc98795d73f9b7226bad102ca5a36111dd88e85865",
       "bytes": 14108,
       "syntax": "syntax OK"
     },
     {
-      "path": "01_data_preprocessing/phase18c_clinical_concepts.py",
+      "path": "01_data_preprocessing/clinical_concept_features.py",
       "source": "src/hospital_wide/phase18c_clinical_concepts(1).py",
       "sha256": "e42ba4bd6b9bf5861349a46d9095242a9dc6b5a4479dc2c2fd002ccf01ec9768",
       "bytes": 12735,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Tree_Ensembles/phase19b_multimodel.py",
+      "path": "03_model_training/Tree_Ensembles/hospitalwide_multimodel_benchmark.py",
       "source": "src/hospital_wide/phase19b_multimodel(1).py",
       "sha256": "ec420308a4651f5595dbb553f6462a66c1ee820f5e737a2f59883c54d7cc936a",
       "bytes": 12187,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase20_audit_ablation.py",
+      "path": "04_model_analysis/feature_leakage_ablation_audit.py",
       "source": "src/hospital_wide/phase20_audit_ablation(1).py",
       "sha256": "b1f9f87990f74c1ea35b6df3c410683f3b1caf10a9ac712e2d4124ab29ab8120",
       "bytes": 8736,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase21_competing_risk.py",
+      "path": "03_model_training/Competing_Risks/hospitalwide_competing_risk_network.py",
       "source": "src/hospital_wide/phase21_competing_risk(1).py",
       "sha256": "9023d8fd4d55ee25f1cce798421a7c393fc0a3f0bd3d43b6281ed43dee524898",
       "bytes": 12086,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase21_renal_only.py",
+      "path": "03_model_training/Competing_Risks/renal_only_competing_risk_evaluation.py",
       "source": "src/hospital_wide/phase21_renal_only.py",
       "sha256": "ebaca01b38514d1ae17878e951c505c21ec1f60867e183da93ac5a3e6a250bf7",
       "bytes": 2851,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase22_validation.py",
+      "path": "04_model_analysis/competing_risk_bootstrap_validation.py",
       "source": "src/hospital_wide/phase22_validation(1).py",
       "sha256": "fcc5ebd58018bad499b4ad6c4c7b4de0988ef484ff1bf12ff55cbf03e047c310",
       "bytes": 3385,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase22_validation_fixed.py",
+      "path": "04_model_analysis/competing_risk_patient_bootstrap_validation.py",
       "source": "src/hospital_wide/phase22_validation_fixed(2).py",
       "sha256": "09c285d096f3820e6d6c85013da8e870a94866cd36082ce21fdfc36ab8481f89",
       "bytes": 5088,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase22a_conservative_retrain.py",
+      "path": "03_model_training/Competing_Risks/conservative_feature_competing_risk_training.py",
       "source": "src/hospital_wide/phase22a_conservative_retrain.py",
       "sha256": "17ab3f57a6a6ac91079fdf06dbd1431e78a7bcea5721a42b680eebbabbe9f0b1",
       "bytes": 14124,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase22a_conservative_retrain_fixed.py",
+      "path": "03_model_training/Competing_Risks/conservative_feature_competing_risk_training_fixed.py",
       "source": "src/hospital_wide/phase22a_conservative_retrain_fixed.py",
       "sha256": "9cfe0bc5e76714ec804aca27bdba2ca07c6f08428a0149cdc4cf4baa4382a843",
       "bytes": 14408,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase22b_labs_retrain.py",
+      "path": "03_model_training/Competing_Risks/laboratory_feature_competing_risk_training.py",
       "source": "src/hospital_wide/phase22b_labs_retrain.py",
       "sha256": "bc0fb9033446f0595fe7400a172c80713aece299a943ec2125110b9896daf428",
       "bytes": 15084,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Competing_Risks/phase23_renal_benchmark.py",
+      "path": "03_model_training/Competing_Risks/renal_competing_risk_benchmark.py",
       "source": "src/hospital_wide/phase23_renal_benchmark.py",
       "sha256": "634856c86cd8edd5a09a6d61718325c79688c27c817492da9ebf10e4e2f40dff",
       "bytes": 9151,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Neural_Networks/phase23b_binary_renal_neural.py",
+      "path": "03_model_training/Neural_Networks/renal_binary_mlp_training.py",
       "source": "src/hospital_wide/phase23b_binary_renal_neural.py",
       "sha256": "31cd4aa6e7105c4c0d8235b2cbaece43ab8aae532d868485772bac5c5888db24",
       "bytes": 9625,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Neural_Networks/phase23c_hospitalwide_binary.py",
+      "path": "03_model_training/Neural_Networks/hospitalwide_binary_mlp_training.py",
       "source": "src/hospital_wide/phase23c_hospitalwide_binary.py",
       "sha256": "47c8146efa75907024337960257ef193ade75e705178e7054377801cea5feb5e",
       "bytes": 9979,
       "syntax": "syntax OK"
     },
     {
-      "path": "02_feature_selection/phase24_feature_reduction.py",
+      "path": "02_feature_selection/feature_budget_ablation.py",
       "source": "src/hospital_wide/phase24_feature_reduction.py",
       "sha256": "5ed3de20e1b7ff042b1eb802b8cd4ed75f9e6945e73c6fddf8ed686c95f794f2",
       "bytes": 8211,
       "syntax": "syntax OK"
     },
     {
-      "path": "04_model_analysis/phase25_feature_audit.py",
+      "path": "04_model_analysis/clinical_feature_provenance_audit.py",
       "source": "src/hospital_wide/phase25_feature_audit.py",
       "sha256": "84806f876b47cbf47c5c12324a5e0cc9edcf59a4a98480960ed2c8db0d35e911",
       "bytes": 3784,
       "syntax": "syntax OK"
     },
     {
-      "path": "02_feature_selection/phase26_shap_engineering.py",
+      "path": "02_feature_selection/shap_ranked_feature_selection.py",
       "source": "src/hospital_wide/phase26_shap_engineering.py",
       "sha256": "ccfa297b7a323c6f288ee7994a384f6ef97630b7eaa5c938d4e8e3e239e0d9f1",
       "bytes": 11668,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Neural_Networks/phase27_renal_tuning.py",
+      "path": "03_model_training/Neural_Networks/renal_neural_hyperparameter_tuning.py",
       "source": "src/hospital_wide/phase27_renal_tuning.py",
       "sha256": "147c8c4961dfc163cf9e57ed6cb4f0c3e450b1f26d6db5356101b7d3722df416",
       "bytes": 11677,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Tree_Ensembles/phase28_optuna_trees.py",
+      "path": "03_model_training/Tree_Ensembles/optuna_tree_model_tuning.py",
       "source": "src/hospital_wide/phase28_optuna_trees.py",
       "sha256": "9c9259fbfd0ec5e615dba33d86e34938397db2f566b4c6c4d93befc6b1b30521",
       "bytes": 8048,
       "syntax": "syntax OK"
     },
     {
-      "path": "03_model_training/Dynamic_Models/phase29_dynamic_renal_pilot.py",
+      "path": "03_model_training/Dynamic_Models/dynamic_renal_landmark_prediction.py",
       "source": "src/hospital_wide/phase29_dynamic_renal_pilot.py",
       "sha256": "6cbd2927b3b48c1c1a07ba438c0c60d1be657c8170e5190502492189b94406e9",
       "bytes": 11380,
