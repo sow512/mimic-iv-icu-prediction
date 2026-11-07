@@ -56,3 +56,16 @@ The repository intentionally excludes row-level MIMIC-IV-derived datasets, featu
 The scripts are historical experiment sources, not a turnkey pipeline. They require the corresponding MIMIC-IV-derived input files, correct local paths, and compatible Python dependencies. Review each script's command-line arguments and target-label assumptions before running. Some older scripts use different input formats and target columns; they are not interchangeable.
 
 These are retrospective research experiments, not a deployed or clinically validated decision-support system.
+
+## File index
+
+- [figures](figures/) — experiment group or supporting materials.
+
+| File | Description |
+|---|---|
+| [`ebm_test_metrics_summary.csv`](ebm_test_metrics_summary.csv) | ebm test metrics summary (aggregate metrics) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+

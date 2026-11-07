@@ -27,3 +27,16 @@ To investigate how machine learning predictions can support ICU capacity plannin
 The simulations are hypothetical and do not represent validated clinical bed-allocation decisions. Predicted ICU-transfer risk is not equivalent to clinical urgency.
 
 Historical MIMIC-IV data and patient-level records are not included in this repository.
+
+## File index
+
+| File | Description |
+|---|---|
+| [`derive_icu_stay_lengths.py`](derive_icu_stay_lengths.py) | derive icu stay lengths (python research script) |
+| [`icu_allocation_simulation.py`](icu_allocation_simulation.py) | icu allocation simulation (python research script) |
+| [`icu_crisis_capacity_simulation.py`](icu_crisis_capacity_simulation.py) | icu crisis capacity simulation (python research script) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+

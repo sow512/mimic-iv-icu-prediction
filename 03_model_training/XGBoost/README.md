@@ -31,3 +31,15 @@ The model incorporates laboratory measurements and engineered temporal features 
 - SMOTE experiments are exploratory and do not replace the original final model.
 - Patient-level data and restricted MIMIC-IV files are not included in this repository.
 - This project is intended for research and demonstration purposes, not clinical decision-making.
+
+## File index
+
+- [200_features](200_features/) — experiment group or supporting materials.
+- [20_features](20_features/) — experiment group or supporting materials.
+- [75_features](75_features/) — experiment group or supporting materials.
+
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+

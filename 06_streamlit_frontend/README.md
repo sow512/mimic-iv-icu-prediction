@@ -1,6 +1,6 @@
 # Streamlit Frontend — ICU Transfer Prediction & Resource Planning
 
-This folder contains the final Streamlit dashboard developed for predicting ICU transfers among kidney-disease patients using the MIMIC-IV dataset.
+This folder contains the research Streamlit dashboard developed for predicting ICU transfers among kidney-disease patients using the MIMIC-IV dataset.
 
 ## Application Features
 
@@ -39,3 +39,18 @@ The application requires the frozen Step 53 XGBoost model, preprocessing bundle 
 - Risk-based ranking reflects predicted ICU-transfer probability, not clinical urgency.
 - ICU simulations and capacity alerts are hypothetical and intended for research purposes only.
 - The application is not validated for real-world clinical decision-making.
+
+## File index
+
+| File | Description |
+|---|---|
+| [`app.py`](app.py) | app (python research script) |
+| [`final_inference_bundle.joblib`](final_inference_bundle.joblib) | final inference bundle.joblib (supporting file) |
+| [`final_model_metadata.json`](final_model_metadata.json) | final model metadata.json (supporting file) |
+| [`final_xgboost_75_model.json`](final_xgboost_75_model.json) | final xgboost 75 model.json (supporting file) |
+| [`requirements.txt`](requirements.txt) | requirements (feature list) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+
