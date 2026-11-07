@@ -1,0 +1,49 @@
+75-FEATURE XGBOOST FINAL TEST RESULTS
+====================================
+
+Test admissions: 22223
+Actual ICU transfers: 727
+
+BEST HYPERPARAMETERS:
+{'subsample': 0.85, 'scale_pos_weight': 1.0, 'reg_lambda': 10, 'n_estimators': 400, 'min_child_weight': 1, 'max_depth': 6, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+
+ORIGINAL VS TUNED TEST RESULTS:
+                                 Original XGBoost  Tuned XGBoost
+AUROC                                     0.76075        0.76478
+AUPRC                                     0.12524        0.13187
+Sensitivity / Recall                      0.73865        0.73040
+Specificity                               0.63463        0.63756
+Precision (PPV)                           0.06400        0.06381
+Accuracy                                  0.63803        0.64060
+F1-Score                                  0.11779        0.11736
+Negative Predictive Value (NPV)           0.98626        0.98590
+Balanced Accuracy                         0.68664        0.68398
+False Positive Rate                       0.36537        0.36244
+False Negative Rate                       0.26135        0.26960
+Brier Score                               0.03024        0.03018
+Classification Threshold                  0.02954        0.02957
+TN                                    13642.00000    13705.00000
+FP                                     7854.00000     7791.00000
+FN                                      190.00000      196.00000
+TP                                      537.00000      531.00000
+
+TUNED CLASSIFICATION REPORT:
+                 precision    recall  f1-score   support
+
+No ICU Transfer       0.99      0.64      0.77     21496
+   ICU Transfer       0.06      0.73      0.12       727
+
+       accuracy                           0.64     22223
+      macro avg       0.52      0.68      0.45     22223
+   weighted avg       0.96      0.64      0.75     22223
+
+TUNED CONFUSION MATRIX:
+[[13705  7791]
+ [  196   531]]
+
+TN: 13705
+FP: 7791
+FN: 196
+TP: 531
+
+Thresholds were selected on validation data and applied unchanged to the reserved test set.

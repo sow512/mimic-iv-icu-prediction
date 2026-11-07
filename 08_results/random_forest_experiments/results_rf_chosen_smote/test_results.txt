@@ -1,0 +1,28 @@
+RF 44 FEATURES + SMOTE
+
+AUROC: 0.72321
+AUPRC: 0.11039
+Brier Score: 0.03116
+Precision: 0.13943
+Recall: 0.25590
+Specificity: 0.96075
+Accuracy: 0.94366
+F1: 0.18051
+NPV: 0.98112
+Balanced Accuracy: 0.60833
+FPR: 0.03925
+FNR: 0.74410
+Threshold: 0.25000
+TN: 170429.00000
+FP: 6962.00000
+FN: 3280.00000
+TP: 1128.00000
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.96      0.97    177391
+           1       0.14      0.26      0.18      4408
+
+    accuracy                           0.94    181799
+   macro avg       0.56      0.61      0.58    181799
+weighted avg       0.96      0.94      0.95    181799

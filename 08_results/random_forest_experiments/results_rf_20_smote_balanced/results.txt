@@ -1,0 +1,35 @@
+20 FEATURE RANDOM FOREST WITH SMOTE
+
+PERFORMANCE METRICS:
+
+AUROC: 0.72751
+AUPRC (Average Precision): 0.09602
+Sensitivity / Recall: 0.47619
+Specificity: 0.80792
+Precision (PPV): 0.07190
+Accuracy: 0.79787
+F1-Score: 0.12493
+Negative Predictive Value (NPV): 0.98014
+Balanced Accuracy: 0.64206
+False Positive Rate: 0.19208
+False Negative Rate: 0.52381
+Brier Score: 0.15578
+Classification Threshold: 0.50000
+TN: 19546.00000
+FP: 4647.00000
+FN: 396.00000
+TP: 360.00000
+
+CLASSIFICATION REPORT:
+              precision    recall  f1-score   support
+
+           0       0.98      0.81      0.89     24193
+           1       0.07      0.48      0.12       756
+
+    accuracy                           0.80     24949
+   macro avg       0.53      0.64      0.51     24949
+weighted avg       0.95      0.80      0.86     24949
+
+CONFUSION MATRIX:
+[[19546  4647]
+ [  396   360]]

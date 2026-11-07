@@ -1,0 +1,19 @@
+RANDOM FOREST - 200 FEATURES
+
+Threshold: 0.55
+AUROC: 0.7575
+AUPRC: 0.1447
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96     21496
+           1       0.15      0.25      0.19       727
+
+    accuracy                           0.93     22223
+   macro avg       0.56      0.60      0.58     22223
+weighted avg       0.95      0.93      0.94     22223
+
+Confusion Matrix:
+[[20452  1044]
+ [  542   185]]

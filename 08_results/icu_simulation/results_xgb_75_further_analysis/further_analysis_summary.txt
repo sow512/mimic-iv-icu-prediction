@@ -1,0 +1,43 @@
+75-FEATURE XGBOOST - FURTHER ANALYSIS
+==================================================
+
+TEST PROBABILITY METRICS
+AUROC: 0.76478
+AUPRC: 0.13187
+Brier Score: 0.03018
+Log Loss: 0.12911
+ICU Prevalence: 0.03271
+Baseline Brier: 0.03164
+Brier Skill Score: 0.04627
+
+ORIGINAL VALIDATION THRESHOLD
+0.029568
+
+RECALL TARGET ANALYSIS
+ Threshold  Precision  Recall  Specificity      F1  Balanced Accuracy  Predicted Positives     TN     FP    FN    TP  Recall Target
+     0.038    0.07752 0.60538      0.75396 0.13744            0.67967               3483.0 9846.0 3213.0 176.0 270.0            0.6
+     0.029    0.05963 0.70852      0.61842 0.11001            0.66347               5299.0 8076.0 4983.0 130.0 316.0            0.7
+     0.024    0.05104 0.82511      0.47607 0.09613            0.65059               7210.0 6217.0 6842.0  78.0 368.0            0.8
+     0.020    0.04263 0.91480      0.29841 0.08147            0.60661               9570.0 3897.0 9162.0  38.0 408.0            0.9
+
+ICU SIMULATION SUMMARY
+                              Metric       Value
+               Number of Simulations 1000.000000
+                Candidate Admissions  100.000000
+                      Available Beds   10.000000
+           Mean Actual ICU Transfers    3.269000
+             Mean Captured in Top 10    1.172000
+          Mean Missed Outside Top 10    2.097000
+                   Mean Precision@10    0.117200
+    Mean Recall@10 (nonempty groups)    0.361424
+                    Pooled Recall@10    0.358519
+                Mean Random Captured    0.320000
+       Mean Random Expected Captures    0.326900
+        Mean Improvement Over Random    0.852000
+      Capture Rate Improvement Ratio    3.585194
+      Capture Count 2.5th Percentile    0.000000
+     Capture Count 97.5th Percentile    3.000000
+Simulations With No Actual Transfers   38.000000
+
+NOTE: Threshold alternatives were examined using validation predictions. The test set was not used to choose new thresholds.
+ICU ranking is a retrospective simulation and does not establish clinical bed-allocation safety or effectiveness.
