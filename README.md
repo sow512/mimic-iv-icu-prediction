@@ -122,6 +122,11 @@ python -m compileall -q 01_data_preprocessing 02_feature_selection 03_model_trai
 **Passing compilation does not mean the experiments run successfully.** A GitHub Actions static-check workflow compiles Python sources and checks the research move map. It does not execute experiments or validate MIMIC-IV data access.
 
 
+## Quick navigation
+
+- [Preprocessing](01_data_preprocessing/README.md) · [Feature selection](02_feature_selection/README.md) · [Model training](03_model_training/README.md) · [Evaluation](04_model_analysis/README.md) · [Streamlit demo](06_streamlit_frontend/README.md)
+- [Original-to-current research file map](src/MOVE_MAP.md) · [Results and figures](08_results/README.md)
+
 ## Results and figures
 
 Browse the [curated aggregate results and nine-figure gallery](08_results/README.md), including model discrimination, calibration, SHAP feature attribution, hypothetical event capture, and Phase 30 neural-network diagnostics. Figures come from different experiments and should not be interpreted as a single matched leaderboard.

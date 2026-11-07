@@ -1,4 +1,11 @@
+# Feature selection
 
-This folder contains feature-selection experiments using VIF, RFE, SHAP and RFECV. It includes the original 20-feature selection results, SHAP-based analysis of different feature counts (15–200), laboratory-level feature selection, and RFECV selection of 484 predictors without a predefined feature-count limit.
+Feature-selection approaches include VIF/RFE, RFECV, TreeSHAP, feature-budget ablations, and timestamp availability audits.
 
-The original VIF/RFE implementation used for the midterm presentation is available in `01_data_preprocessing/mimic_iv_cohort_preprocessing_feature_engineering.ipynb`.
+- [RFECV feature selection (484 candidates)](rfecv_feature_selection_484_candidates.py) — exploratory XGBoost RFECV; currently contains machine-specific input paths.
+- [Feature budget ablation](feature_budget_ablation.py) — tests reduced feature sets.
+- [SHAP-ranked selection](shap_ranked_feature_selection.py) — feature engineering/selection for later experiments.
+- [Feature availability audit](feature_timestamp_availability_audit.py) — checks timing assumptions.
+- [Original preprocessing notebook](../01_data_preprocessing/mimic_iv_cohort_preprocessing_feature_engineering.ipynb) — initial VIF/RFE workflow.
+
+Feature selection must be fit within development data, never on held-out evaluation labels.

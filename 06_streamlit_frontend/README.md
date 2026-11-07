@@ -1,41 +1,14 @@
-# Streamlit Frontend — ICU Transfer Prediction & Resource Planning
+# Streamlit research demo — ICU transfer and capacity planning
 
-This folder contains the final Streamlit dashboard developed for predicting ICU transfers among kidney-disease patients using the MIMIC-IV dataset.
+The entry point is **[app.py](app.py)** (not `staylength.py` or `icu_crisis_app.py`). It loads a previously fitted 75-feature XGBoost model and preprocessing bundle; it does **not** train a model.
 
-## Application Features
-
-- **ICU Transfer Prediction:** Uses the final 75-feature XGBoost model to estimate ICU-transfer risk within 24–72 hours after hospital admission.
-- **Risk Stratification:** Ranks patients based on predicted ICU-transfer probabilities.
-- **SHAP Explainability:** Identifies the major features influencing individual patient predictions.
-- **ICU Crisis Management:** Simulates bed availability, demand surges, waiting-time constraints and risk-prioritized allocation.
-- **Resource Planning:** Evaluates potential ICU shortages under different hypothetical capacity scenarios.
-
-## Files
-
-| File | Description |
-|---|---|
-| `staylength.py` | Final Streamlit application integrating prediction, explainability and ICU capacity simulation. |
-| `requirements.txt` | Python dependencies required to run the application. |
-
-## Running the Application
-
-Install dependencies:
+## Run locally
 
 ```bash
-pip install -r requirements.txt
+pip install -r 06_streamlit_frontend/requirements.txt
+streamlit run 06_streamlit_frontend/app.py
 ```
 
-Launch the dashboard:
+The app requires `final_xgboost_75_model.json`, `final_inference_bundle.joblib`, and `final_model_metadata.json` from an authorized local model-artifact directory. Configure `ICU_MODEL_DIR` as needed. These artifacts are **not included in GitHub**, so a public deployment will not function until the matching artifacts and dependencies are supplied.
 
-```bash
-streamlit run staylength.py
-```
-
-The application requires the frozen Step 53 XGBoost model, preprocessing bundle and metadata files, which must be supplied locally by authorized users.
-
-## Important Notes
-
-- Patient-level MIMIC-IV data and demonstration datasets are not included in this repository.
-- Risk-based ranking reflects predicted ICU-transfer probability, not clinical urgency.
-- ICU simulations and capacity alerts are hypothetical and intended for research purposes only.
-- The application is not validated for real-world clinical decision-making.
+Features include risk ranking, explainability, and hypothetical ICU capacity simulations. Use **synthetic or approved non-identifiable demonstration inputs only**. Predictions represent retrospective observed transfer risk, not clinical urgency or medical advice. Not validated for clinical use.
