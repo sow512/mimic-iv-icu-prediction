@@ -1,0 +1,5 @@
+experiment,model,encoded_features,n_validation,n_events,auroc,auprc,brier,recall_top10
+phase21_renal,Linear Discrete-Time Competing Risks,313,8565,160,0.751496,0.075933,0.018828,0.356250
+phase21_renal,Deep Discrete-Time Competing Risks,313,8565,160,0.781151,0.090921,0.017710,0.406250
+phase26_renal,SHAP-Selected Binary MLP,122,8565,160,0.788479,0.092762,0.017749,0.425000
+phase26_renal,SHAP-Selected Neural Competing Risks,122,8565,160,0.784224,0.089678,0.017723,0.375000
