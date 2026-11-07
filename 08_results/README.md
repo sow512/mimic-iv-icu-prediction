@@ -72,7 +72,7 @@ Both models give high importance to **admission type** and other administrative/
 - ICU transfer is an observed care-utilization outcome, not necessarily clinical need for ICU admission.
 - No claim of clinical deployment readiness or independent external validation is made.
 
-Canonical code locations: [research source index](../src/README.md).
+Model implementations: [tree ensembles](../03_model_training/Tree_Ensembles/README.md), [neural networks](../03_model_training/Neural_Networks/README.md), and [competing risks](../03_model_training/Competing_Risks/README.md).
 
 
 ---
