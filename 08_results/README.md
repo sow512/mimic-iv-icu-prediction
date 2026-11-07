@@ -16,6 +16,51 @@
 
 **Phase 30:** Optuna-tuned MLP with **1,009 input features**, depth 2, width 256, dropout ~0.331. Best selection AUPRC **0.199050**, not a held-out evaluation score. CSV values are rounded development diagnostic metrics; the development report confirms cohort and split sizes and best selection AUPRC.
 
+
+## Figure gallery
+
+All nine images below are existing experiment outputs. They are **retrospective descriptive plots**, not independent clinical validation. The source folder is reflected in each filename.
+
+### Prediction discrimination — original renal model blend
+
+![ROC and precision–recall curves for the original model blend](original_style_results__blend_curves.png)
+
+**Original blend:** AUROC **0.683**, AUPRC **0.140** on the evaluation represented in this figure. This is a separate experiment from Phase 9C's all-feature blend (AUROC 0.7604, AUPRC 0.2143); do not label them as the same run. The precision–recall baseline is the positive-event prevalence.
+
+### Retrospective event capture under hypothetical capacity
+
+![Risk-ranked event capture compared with random selection](phase6_outputs__phase6_capture_curve.png)
+
+**Phase 6:** At a hypothetical 10% selection capacity, the plotted risk ranking captures approximately 30% of subsequent transfers versus approximately 10% under random selection. This is **not** a prospective ICU-bed allocation trial or evidence of improved outcomes.
+
+### Feature attribution
+
+| LightGBM | CatBoost |
+|---|---|
+| ![LightGBM global SHAP feature importance](phase5_outputs__lightgbm_importance.png) | ![CatBoost global SHAP feature importance](phase5_outputs__catboost_importance.png) |
+
+Both models give high importance to **admission type** and other administrative/clinical variables. SHAP magnitude is a measure of model attribution, **not causality**; high administrative importance warrants workflow-dependence and leakage investigation.
+
+![Phase 10 LightGBM global SHAP importance, including historical renal features](phase10_outputs__lightgbm_shap_importance.png)
+
+**Phase 10:** Prior CKD/AKI history, hospital utilization, admission type, and clinical measurements appear among influential predictors. These are model-specific attributions and should not be compared numerically with Phase 5 without matched models and data.
+
+### Probability calibration
+
+![Internal evaluation reliability plot comparing uncalibrated, sigmoid and isotonic predictions](phase4b_outputs__phase4b_reliability.png)
+
+**Phase 4B:** Ten equal-count bins compare mean predicted probability against observed ICU-transfer frequency. Most plotted predictions lie below 0.2, so the full 0–1 axes visually compress the informative region. Refer to numerical calibration metrics before claiming improvement.
+
+### Phase 30 — Optuna-tuned MLP, development partitions only
+
+| Model-selection ROC | Model-selection precision–recall |
+|---|---|
+| ![Phase 30 selection ROC](phase30_diagnostics__selection_roc.png) | ![Phase 30 selection precision–recall](phase30_diagnostics__selection_pr.png) |
+
+![Phase 30 calibration-partition precision–recall](phase30_diagnostics__calibration_pr.png)
+
+**Phase 30:** Selection AUROC **0.716** and AUPRC **0.199**; calibration-partition AUPRC **0.174**. These are **different development partitions**, and the selection partition was used for tuning. The drop does not alone establish overfitting, and neither figure represents untouched held-out test performance.
+
 ## Methodological cautions
 
 - **Do not directly compare AUPRC between Phase 9C, Phase 21/26, and Phase 30.** Their cohorts, prevalences, and evaluation partitions differ.
