@@ -91,6 +91,10 @@ The numbered directories are the canonical team workflow. Research scripts have 
 
 **Where to start:** See [src/MOVE_MAP.md](src/MOVE_MAP.md) for each original phase script and its canonical location. The EBM experiment scripts are indexed in [03_model_training/EBM](03_model_training/EBM/README.md), with aggregate summaries in [08_results/ebm_experiments](08_results/ebm_experiments/README.md). The original notebook remains a historical walkthrough and is not a verified runnable pipeline.
 
+## Local data configuration
+
+Historical scripts use external, authorized MIMIC-IV data. Set `MIMIC_PROJECT_ROOT` to your local research workspace for the legacy XGBoost, SHAP, RFECV and validation scripts. Set `ICU_75_FEATURE_WORKBOOK` to the 75-feature Excel workbook for the standalone SMOTE experiment. The SVM/MLP notebooks use `ICU_DATA_DIR` for their input spreadsheets. No personal machine paths or restricted data are stored in the current source tree. Some older scripts still assume their original generated subfolder structure, and runtime compatibility is not yet guaranteed.
+
 ## Getting started
 
 ### Prerequisites

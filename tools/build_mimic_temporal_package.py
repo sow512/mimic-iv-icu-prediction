@@ -33,7 +33,7 @@ def main():
  ap=argparse.ArgumentParser(description=__doc__)
  ap.add_argument('--base',required=True,help='Local MIMIC-IV 3.1 root or parent')
  ap.add_argument('--team-zip',required=True,help='Existing MIMIC_IV_TEAM_PACKAGE.zip')
- ap.add_argument('--output',required=True,help='New output directory, e.g. ~/Downloads/MIMIC_IV_TEMPORAL_PACKAGE')
+ ap.add_argument('--output',required=True,help='New output directory, e.g. ./outputs/temporal_package')
  ap.add_argument('--chunksize',type=int,default=200000)
  ap.add_argument('--sources',nargs='+',choices=list(SOURCES),default=['labs','emar','prescriptions','orders','microbiology'])
  ap.add_argument('--strict-only',action='store_true',help='Export only sources with a second recorded availability timestamp (labs/eMAR/microbiology)')

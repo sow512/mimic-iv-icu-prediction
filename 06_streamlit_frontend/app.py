@@ -1,5 +1,5 @@
 """ICU Transfer Prediction -> Explainable Risk Stratification -> ICU Crisis Capacity Management (research demo).
-Run:  streamlit run icu_crisis_app.py
+Run:  streamlit run 06_streamlit_frontend/app.py
 Uses the frozen Step 53 XGBoost model; it never trains or modifies it.
 Risk order = predicted ICU-transfer risk, NOT clinical urgency. Simulations are hypothetical.
 """

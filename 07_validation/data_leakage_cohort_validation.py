@@ -3,6 +3,7 @@
 # STEP 49: COHORT, FEATURE AND DATA LEAKAGE AUDIT
 # ============================================================
 
+import os
 from pathlib import Path
 import json
 import joblib
@@ -12,7 +13,7 @@ import pandas as pd
 from sklearn.model_selection import GroupShuffleSplit
 
 PROJECT = Path(
-    r"C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV"
+    os.environ["MIMIC_PROJECT_ROOT"]
 )
 
 SOURCE = (

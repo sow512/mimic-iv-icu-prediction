@@ -1,8 +1,8 @@
 """Build data/icu_stay_hours.csv (ICU stay lengths in hours) from MIMIC-IV icustays.
 
 Usage (PowerShell, from the ICU_STREAMLIT_APP folder):
-  python tools/make_stay_lengths.py "D:/mimiciv/icu/icustays.csv.gz"
-  python tools/make_stay_lengths.py "D:/mimiciv/icu/icustays.csv.gz" --cohort "D:/.../expanded_lab_xgboost/cohort_audit.csv"
+  python 05_icu_optimization/derive_icu_stay_lengths.py "/path/to/icu/icustays.csv.gz"
+  python 05_icu_optimization/derive_icu_stay_lengths.py "/path/to/icu/icustays.csv.gz" --cohort "/path/to/cohort_audit.csv"
 
 --cohort keeps only ICU stays of admissions in your kidney cohort whose icu_transfer == 1 (needs columns hadm_id, icu_transfer).
 Each admission contributes its FIRST ICU stay. The output has one column (los_hours) and no patient identifiers.

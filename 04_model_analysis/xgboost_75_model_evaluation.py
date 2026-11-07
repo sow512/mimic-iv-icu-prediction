@@ -1,6 +1,7 @@
 """Step 54: Read-only exploratory evaluation of saved Step 53 XGBoost.
 No training, threshold tuning, or recalibration. Requires original saved artifacts.
 """
+import os
 from pathlib import Path
 import json
 import joblib
@@ -16,7 +17,7 @@ from sklearn.metrics import (roc_auc_score, average_precision_score, roc_curve,
     accuracy_score, precision_score, recall_score, f1_score, brier_score_loss)
 from sklearn.calibration import calibration_curve
 
-PROJECT = Path(r'C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV')
+PROJECT = Path(os.environ["MIMIC_PROJECT_ROOT"])
 SOURCE = PROJECT / 'model training figures' / 'expanded_lab_xgboost'
 MODEL_DIR = SOURCE / 'step53_final_75_model'
 DATA_FILE = SOURCE / 'step51_timing_corrected' / 'expanded_candidate_features_storetime_corrected.parquet'

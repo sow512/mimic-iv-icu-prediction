@@ -1,6 +1,7 @@
 """Step 70 FAST: grouped XGBoost RFECV without VIF, using Step 51 corrected candidate features.
 Exploratory evaluation; original models remain untouched.
 """
+import os
 from pathlib import Path
 import json, re, warnings
 import numpy as np
@@ -20,7 +21,7 @@ from sklearn.metrics import (roc_auc_score, average_precision_score, confusion_m
 from xgboost import XGBClassifier
 import joblib
 
-ROOT = Path(r'C:\Users\sowmy\Downloads\MIMIC-IV\MIMIC_IV\MIMIC_IV')
+ROOT = Path(os.environ["MIMIC_PROJECT_ROOT"])
 BASE = ROOT / 'model training figures' / 'expanded_lab_xgboost'
 FEATURE_FILE = BASE / 'step51_timing_corrected' / 'expanded_candidate_features_storetime_corrected.parquet'
 OUT = BASE / 'step70_fast_rfecv_no_vif'
