@@ -80,3 +80,27 @@ Canonical code locations: [research source index](../src/README.md).
 ## EBM experiments
 
 See the [EBM experiment archive](ebm_experiments/README.md) for aggregate metrics, methodology caveats, and the supplied experiment inventory. This is separate from the curated historical results above; do not combine metrics across the two archives as though they are from a single benchmark.
+
+## File index
+
+- [ebm_experiments](ebm_experiments/) — experiment group or supporting materials.
+
+| File | Description |
+|---|---|
+| [`original_style_results__blend_curves.png`](original_style_results__blend_curves.png) | original style results  blend curves (experiment figure) |
+| [`phase10_outputs__lightgbm_shap_importance.png`](phase10_outputs__lightgbm_shap_importance.png) | phase10 outputs  lightgbm shap importance (experiment figure) |
+| [`phase30_diagnostics__calibration_pr.png`](phase30_diagnostics__calibration_pr.png) | phase30 diagnostics  calibration pr (experiment figure) |
+| [`phase30_diagnostics__selection_pr.png`](phase30_diagnostics__selection_pr.png) | phase30 diagnostics  selection pr (experiment figure) |
+| [`phase30_diagnostics__selection_roc.png`](phase30_diagnostics__selection_roc.png) | phase30 diagnostics  selection roc (experiment figure) |
+| [`phase30_mlp_development.csv`](phase30_mlp_development.csv) | phase30 mlp development (aggregate metrics) |
+| [`phase4b_outputs__phase4b_reliability.png`](phase4b_outputs__phase4b_reliability.png) | phase4b outputs  phase4b reliability (experiment figure) |
+| [`phase5_outputs__catboost_importance.png`](phase5_outputs__catboost_importance.png) | phase5 outputs  catboost importance (experiment figure) |
+| [`phase5_outputs__lightgbm_importance.png`](phase5_outputs__lightgbm_importance.png) | phase5 outputs  lightgbm importance (experiment figure) |
+| [`phase6_outputs__phase6_capture_curve.png`](phase6_outputs__phase6_capture_curve.png) | phase6 outputs  phase6 capture curve (experiment figure) |
+| [`phase9c_feature_ablation.csv`](phase9c_feature_ablation.csv) | phase9c feature ablation (aggregate metrics) |
+| [`renal_neural_comparison.csv`](renal_neural_comparison.csv) | renal neural comparison (aggregate metrics) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+

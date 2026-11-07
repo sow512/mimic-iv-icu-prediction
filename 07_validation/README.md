@@ -31,3 +31,19 @@ This folder contains validation scripts used to assess data integrity, ICU-trans
 Patient-level MIMIC-IV records, restricted datasets, and private identifiers are excluded from this repository.
 
 **Note:** This project is intended for academic research and demonstration purposes only, not clinical decision-making.
+
+## File index
+
+| File | Description |
+|---|---|
+| [`data_leakage_cohort_validation.py`](data_leakage_cohort_validation.py) | data leakage cohort validation (python research script) |
+| [`icu_outcome_consistency_audit.py`](icu_outcome_consistency_audit.py) | icu outcome consistency audit (python research script) |
+| [`icu_outcome_dataset_validation.py`](icu_outcome_dataset_validation.py) | icu outcome dataset validation (python research script) |
+| [`icu_simulation_validation.py`](icu_simulation_validation.py) | icu simulation validation (python research script) |
+| [`model_simulation_verification.py`](model_simulation_verification.py) | model simulation verification (python research script) |
+| [`streamlit_prediction_verification.py`](streamlit_prediction_verification.py) | streamlit prediction verification (python research script) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+

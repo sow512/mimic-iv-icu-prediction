@@ -167,3 +167,7 @@ This work uses the MIMIC-IV research ecosystem. Users should consult the officia
 ---
 
 **Status:** Exploratory retrospective clinical ML research · **Intended audience:** Researchers and technical reviewers · **Not for clinical decision-making**
+
+## Documentation by workstream
+
+The numbered folders contain detailed README files with file-level navigation and experiment scope. Start with [preprocessing](01_data_preprocessing/README.md), [feature selection](02_feature_selection/README.md), [model training](03_model_training/README.md), [analysis](04_model_analysis/README.md), [optimization](05_icu_optimization/README.md), [Streamlit](06_streamlit_frontend/README.md), [validation](07_validation/README.md), and [results](08_results/README.md).

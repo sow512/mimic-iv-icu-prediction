@@ -15,3 +15,14 @@ Original phase scripts now live alongside the team's code in the numbered folder
 | Optimization | [`05_icu_optimization/`](../05_icu_optimization/) |
 
 See [MOVE_MAP.md](MOVE_MAP.md) for exact file paths. Historical hard-coded paths may need updating before execution; no full runtime validation has been performed.
+
+## File index
+
+| File | Description |
+|---|---|
+| [`MOVE_MAP.md`](MOVE_MAP.md) | MOVE MAP.md (supporting file) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+

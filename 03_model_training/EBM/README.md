@@ -13,3 +13,20 @@ This folder contains the EBM training scripts supplied for the renal ICU-transfe
 - `EBM_SMOTE75.py` — audited patient-window cohort, feature selection, and SMOTE comparison.
 
 These are historical experiment scripts, not a turnkey pipeline. They require authorized local MIMIC-IV-derived input files and compatible dependencies. Review each script's CLI arguments, label definition, feature availability assumptions, and expected input format before execution.
+
+## File index
+
+| File | Description |
+|---|---|
+| [`EBM_200.py`](EBM_200.py) | EBM 200 (python research script) |
+| [`EBM_20_features.py`](EBM_20_features.py) | EBM 20 features (python research script) |
+| [`EBM_75.py`](EBM_75.py) | EBM 75 (python research script) |
+| [`EBM_75_SMOTE(Tuned).py`](EBM_75_SMOTE%28Tuned%29.py) | EBM 75 SMOTE(Tuned) (python research script) |
+| [`EBM_75_tuned.py`](EBM_75_tuned.py) | EBM 75 tuned (python research script) |
+| [`EBM_SMOTE75.py`](EBM_SMOTE75.py) | EBM SMOTE75 (python research script) |
+| [`EBM_SMOTE_200.py`](EBM_SMOTE_200.py) | EBM SMOTE 200 (python research script) |
+
+## Reproducibility status
+
+This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
+
