@@ -7,7 +7,7 @@ LightGBM, CatBoost, weighted blends, clinical feature ablations, Optuna tuning a
 - [`clinical_feature_ablation_lgbm_catboost.py`](clinical_feature_ablation_lgbm_catboost.py) — Python experiment script.
 - [`hospitalwide_multimodel_benchmark.py`](hospitalwide_multimodel_benchmark.py) — Python experiment script.
 - [`optuna_tree_model_tuning.py`](optuna_tree_model_tuning.py) — Python experiment script.
-- [`original_style_lgbm_catboost.py`](original_style_lgbm_catboost.py) — Python experiment script.
+- [`initial_lightgbm_catboost_comparison.py`](initial_lightgbm_catboost_comparison.py) — Python experiment script.
 - [`renal_lightgbm_catboost_training.py`](renal_lightgbm_catboost_training.py) — Python experiment script.
 
 ## Scope and reproducibility

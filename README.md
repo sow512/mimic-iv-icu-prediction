@@ -74,7 +74,7 @@ These formulations answer related but **different** statistical questions. Repea
 
 ## Repository map
 
-The numbered directories are the canonical team workflow. Research scripts have been moved into these folders alongside existing contributions; `src/` now contains navigation and a complete [old-to-new path map](src/MOVE_MAP.md).
+The numbered directories are the canonical team workflow. Scripts are organized by purpose and model family; see each folder's README for current filenames.
 
 | Directory | Contents |
 |---|---|
@@ -86,10 +86,9 @@ The numbered directories are the canonical team workflow. Research scripts have 
 | [06_streamlit_frontend](06_streamlit_frontend/) | Interactive application |
 | [07_validation](07_validation/) | Team verification and validation scripts |
 | [08_results](08_results/) | Non-sensitive aggregate results, including the EBM experiment archive |
-| [src](src/) | Navigation index and file move map; no duplicate model source |
 | [notebooks](notebooks/) | Research walkthrough notebook (historical paths may need updating) |
 
-**Where to start:** See [src/MOVE_MAP.md](src/MOVE_MAP.md) for each original phase script and its canonical location. The EBM experiment scripts are indexed in [03_model_training/EBM](03_model_training/EBM/README.md), with aggregate summaries in [08_results/ebm_experiments](08_results/ebm_experiments/README.md). The original notebook remains a historical walkthrough and is not a verified runnable pipeline.
+**Where to start:** Browse the numbered workstream folders and their README files. The EBM experiment scripts are indexed in [03_model_training/EBM](03_model_training/EBM/README.md), with aggregate summaries in [08_results/ebm_experiments](08_results/ebm_experiments/README.md). The original notebook remains a historical walkthrough and is not a verified runnable pipeline.
 
 ## Local data configuration
 

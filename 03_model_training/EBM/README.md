@@ -4,13 +4,13 @@ This folder contains the EBM training scripts supplied for the renal ICU-transfe
 
 ## Scripts
 
-- `EBM_20_features.py` — 20-feature EBM.
-- `EBM_75.py` — baseline 75-feature EBM.
-- `EBM_75_tuned.py` — tuned 75-feature EBM.
-- `EBM_75_SMOTE(Tuned).py` — tuned 75-feature EBM with SMOTE/SMOTENC.
-- `EBM_200.py` — 200-feature EBM.
-- `EBM_SMOTE_200.py` — baseline vs SMOTE ratios 0.2, 0.5, and 1.0 on the 200-feature dataset.
-- `EBM_SMOTE75.py` — audited patient-window cohort, feature selection, and SMOTE comparison.
+- `ebm_20_feature_training.py` — 20-feature EBM.
+- `ebm_75_feature_training.py` — baseline 75-feature EBM.
+- `ebm_75_feature_tuning.py` — tuned 75-feature EBM.
+- `ebm_75_feature_tuned_smote.py` — tuned 75-feature EBM with SMOTE/SMOTENC.
+- `ebm_200_feature_training.py` — 200-feature EBM.
+- `ebm_200_feature_smote_comparison.py` — baseline vs SMOTE ratios 0.2, 0.5, and 1.0 on the 200-feature dataset.
+- `ebm_75_feature_smote_comparison.py` — audited patient-window cohort, feature selection, and SMOTE comparison.
 
 These are historical experiment scripts, not a turnkey pipeline. They require authorized local MIMIC-IV-derived input files and compatible dependencies. Review each script's CLI arguments, label definition, feature availability assumptions, and expected input format before execution.
 
@@ -18,13 +18,13 @@ These are historical experiment scripts, not a turnkey pipeline. They require au
 
 | File | Description |
 |---|---|
-| [`EBM_200.py`](EBM_200.py) | EBM 200 (python research script) |
-| [`EBM_20_features.py`](EBM_20_features.py) | EBM 20 features (python research script) |
-| [`EBM_75.py`](EBM_75.py) | EBM 75 (python research script) |
-| [`EBM_75_SMOTE(Tuned).py`](EBM_75_SMOTE%28Tuned%29.py) | EBM 75 SMOTE(Tuned) (python research script) |
-| [`EBM_75_tuned.py`](EBM_75_tuned.py) | EBM 75 tuned (python research script) |
-| [`EBM_SMOTE75.py`](EBM_SMOTE75.py) | EBM SMOTE75 (python research script) |
-| [`EBM_SMOTE_200.py`](EBM_SMOTE_200.py) | EBM SMOTE 200 (python research script) |
+| [`ebm_200_feature_training.py`](ebm_200_feature_training.py) | EBM 200 (python research script) |
+| [`ebm_20_feature_training.py`](ebm_20_feature_training.py) | EBM 20 features (python research script) |
+| [`ebm_75_feature_training.py`](ebm_75_feature_training.py) | EBM 75 (python research script) |
+| [`ebm_75_feature_tuned_smote.py`](EBM_75_SMOTE%28Tuned%29.py) | EBM 75 SMOTE(Tuned) (python research script) |
+| [`ebm_75_feature_tuning.py`](ebm_75_feature_tuning.py) | EBM 75 tuned (python research script) |
+| [`ebm_75_feature_smote_comparison.py`](ebm_75_feature_smote_comparison.py) | EBM SMOTE75 (python research script) |
+| [`ebm_200_feature_smote_comparison.py`](ebm_200_feature_smote_comparison.py) | EBM SMOTE 200 (python research script) |
 
 ## Reproducibility status
 

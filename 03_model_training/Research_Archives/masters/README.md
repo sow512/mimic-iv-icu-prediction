@@ -4,7 +4,7 @@ Historical renal master pipeline; may rely on older feature definitions and loca
 
 ## Contents
 
-- [`renal_master.py`](renal_master.py) — Python experiment script.
+- [`renal_pipeline_reference.py`](renal_pipeline_reference.py) — Python experiment script.
 
 ## Scope and reproducibility
 
