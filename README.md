@@ -121,6 +121,11 @@ python -m compileall -q 01_data_preprocessing 02_feature_selection 03_model_trai
 
 **Passing compilation does not mean the experiments run successfully.** A GitHub Actions static-check workflow compiles Python sources and checks the research move map. It does not execute experiments or validate MIMIC-IV data access.
 
+
+## Results and figures
+
+Browse the [curated aggregate results and nine-figure gallery](08_results/README.md), including model discrimination, calibration, SHAP feature attribution, hypothetical event capture, and Phase 30 neural-network diagnostics. Figures come from different experiments and should not be interpreted as a single matched leaderboard.
+
 ## Data access and privacy
 
 MIMIC-IV is a controlled-access clinical dataset. **No patient-level data, feature tables, labels, trained model artifacts, or prediction exports are included in this repository.** Obtain access through the dataset's official process and follow its data-use conditions. Keep restricted inputs and outputs outside version control and in approved storage.
