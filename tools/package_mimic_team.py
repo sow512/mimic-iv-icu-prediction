@@ -35,9 +35,9 @@ def sha256(path):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--root', default='~/Downloads/MIMIC_IV', help='Directory containing phase*_outputs')
-    p.add_argument('--destination', default='~/Downloads/MIMIC_IV_TEAM_PACKAGE')
-    p.add_argument('--code-dir', default='~/Downloads')
+    p.add_argument('--root', default='./local_mimic_data', help='Directory containing phase*_outputs')
+    p.add_argument('--destination', default='./outputs/team_package')
+    p.add_argument('--code-dir', default='.')
     p.add_argument('--include-checkpoints', action='store_true', help='Include Phase21/23C model files (may be large)')
     p.add_argument('--include-validation-predictions', action='store_true', help='Include saved development validation predictions')
     p.add_argument('--overwrite', action='store_true', help='Replace existing destination directory and ZIP')
