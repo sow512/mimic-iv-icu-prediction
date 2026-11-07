@@ -1,1 +1,3 @@
 This folder contains machine learning model training experiments for ICU-transfer prediction using different feature configurations (20, 44, 75 and 200 features). It includes baseline training, class imbalance handling with SMOTE/SMOTENC, and final XGBoost model development. Additional model families, including Random Forest, EBM, SVM, MLP and neural networks, are organized into their respective subfolders.
+
+The [EBM folder](EBM/README.md) contains the supplied 20-, 75-, and 200-feature baseline, tuned, and SMOTE experiment scripts. Aggregate EBM metrics, cohort summaries, and figure files are indexed in [08_results/ebm_experiments](../08_results/ebm_experiments/README.md).
