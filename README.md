@@ -74,26 +74,22 @@ These formulations answer related but **different** statistical questions. Repea
 
 ## Repository map
 
-```text
-.
-├── src/
-│   ├── early_renal/
-│   │   ├── phases/          # Initial renal pipeline and later phase scripts
-│   │   ├── experiments/     # Comparisons and supporting analyses
-│   │   └── masters/         # Distinct retained master-script versions
-│   ├── hospital_wide/
-│   │   ├── phases/          # Expanded cohort and modeling experiments
-│   │   └── experiments/     # Supporting benchmarks
-│   └── dynamic/             # Repeated-landmark renal pilot
-├── notebooks/
-│   └── renal_icu_end_to_end_explained.ipynb
-├── tools/                    # Packaging and extraction utilities
-├── requirements.txt         # Approximate, unpinned dependency list
-├── CODE_INVENTORY.json      # Source mapping and checksums
-└── CLEANUP_REPORT.md        # Deduplication and cleanup notes
-```
+The numbered directories are the canonical team workflow. Research scripts have been moved into these folders alongside existing contributions; `src/` now contains navigation and a complete [old-to-new path map](src/MOVE_MAP.md).
 
-**Where to start:** Read the [walkthrough notebook](notebooks/renal_icu_end_to_end_explained.ipynb) for a guided tour, then explore `src/early_renal/phases/` for the original experiments. The notebook's outputs have been cleared; it has not been verified as a one-click reproducible run.
+| Directory | Contents |
+|---|---|
+| [01_data_preprocessing](01_data_preprocessing/) | Team preprocessing and renal research cohort/feature builders |
+| [02_feature_selection](02_feature_selection/) | Team feature selection and renal feature-selection experiments |
+| [03_model_training](03_model_training/) | XGBoost, tree ensembles, neural networks, competing risks, dynamic models, and archived research experiments |
+| [04_model_analysis](04_model_analysis/) | Calibration, validation, explainability, and ablation scripts |
+| [05_icu_optimization](05_icu_optimization/) | ICU allocation and simulation work |
+| [06_streamlit_frontend](06_streamlit_frontend/) | Interactive application |
+| [07_validation](07_validation/) | Team verification and validation scripts |
+| [08_results](08_results/) | Reserved for non-sensitive aggregate results and documentation |
+| [src](src/) | Navigation index and file move map; no duplicate model source |
+| [notebooks](notebooks/) | Research walkthrough notebook (historical paths may need updating) |
+
+**Where to start:** See [src/MOVE_MAP.md](src/MOVE_MAP.md) for each original phase script and its canonical location. The original notebook remains a historical walkthrough and is not a verified runnable pipeline.
 
 ## Getting started
 
@@ -114,16 +110,16 @@ The dependency list is an **approximate union of imports**, not a pinned, tested
 To inspect an individual script's interface:
 
 ```bash
-python src/early_renal/phases/phase1_cohort.py --help
+python 01_data_preprocessing/renal_research/phase1_cohort.py --help
 ```
 
 Not every historical script is guaranteed to expose the same CLI or run independently. Some still assume legacy paths, filenames, working directories, or sibling scripts. Review its source and required input tables before running it. A syntax-only check can be performed with:
 
 ```bash
-python -m compileall -q src tools
+python -m compileall -q 01_data_preprocessing 02_feature_selection 03_model_training 04_model_analysis 05_icu_optimization 06_streamlit_frontend 07_validation tools
 ```
 
-**Passing compilation does not mean the experiments run successfully.** The reorganized repository has not undergone full integration testing against MIMIC-IV.
+**Passing compilation does not mean the experiments run successfully.** A GitHub Actions static-check workflow compiles Python sources and checks the research move map. It does not execute experiments or validate MIMIC-IV data access.
 
 ## Data access and privacy
 

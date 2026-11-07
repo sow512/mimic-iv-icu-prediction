@@ -23,3 +23,9 @@
 - Full runtime integration, clinical leakage audits, and reproducibility against MIMIC-IV were not performed.
 - Code references to legacy script names or local paths may need updating after reorganization.
 - Source code should be reviewed for credentials and confidential strings before public publication.
+
+## Subsequent team integration
+- Moved research Python files into numbered team workflow folders without modifying their source bytes.
+- Updated the root README and code inventory to reflect canonical paths.
+- Added a static CI check for Python syntax and mapped file existence.
+- Full runtime execution and historical notebook path remediation still require an authorized MIMIC-IV environment.
