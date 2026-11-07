@@ -23,7 +23,7 @@ for item in json.loads((root / "CODE_INVENTORY.json").read_text(encoding="utf-8"
     if not (root / item["path"]).is_file():
         errors.append(f"Missing inventory entry: {item['path']}")
 # Detect stale literal references to the relocated source tree in text files.
-legacy_prefixes = ("src/early_renal/", "src/hospital_wide/", "src/dynamic/")
+legacy_prefixes = tuple("src/" + name + "/" for name in ("early_renal", "hospital_wide", "dynamic"))
 scan_dirs = ["01_data_preprocessing", "02_feature_selection", "03_model_training",
              "04_model_analysis", "05_icu_optimization", "06_streamlit_frontend",
              "07_validation", "tools"]
