@@ -1,7 +1,6 @@
 """Static repository checks; does not access clinical data."""
 from pathlib import Path
 import json
-import re
 import sys
 
 root = Path(__file__).resolve().parents[1]
@@ -23,6 +22,18 @@ for old, new in pairs:
 for item in json.loads((root / "CODE_INVENTORY.json").read_text(encoding="utf-8"))["files"]:
     if not (root / item["path"]).is_file():
         errors.append(f"Missing inventory entry: {item['path']}")
+# Detect stale literal references to the relocated source tree in text files.
+legacy_prefixes = ("src/early_renal/", "src/hospital_wide/", "src/dynamic/")
+scan_dirs = ["01_data_preprocessing", "02_feature_selection", "03_model_training",
+             "04_model_analysis", "05_icu_optimization", "06_streamlit_frontend",
+             "07_validation", "tools"]
+for dirname in scan_dirs:
+    for path in (root / dirname).rglob("*.py"):
+        content = path.read_text(encoding="utf-8")
+        for prefix in legacy_prefixes:
+            if prefix in content:
+                errors.append(f"Legacy source path in {path.relative_to(root)}: {prefix}")
+
 for error in errors:
     print("ERROR:", error)
 print(f"Checked {len(pairs)} moves and inventory; {len(errors)} errors")
