@@ -4,8 +4,8 @@ Support-vector machine and MLP notebooks comparing 21/44-feature configurations 
 
 ## Contents
 
-- [`21_44_SVM_MLP_nosmote.ipynb`](21_44_SVM_MLP_nosmote.ipynb) — exploratory notebook.
-- [`75_100_SVM_MLP_incSMOTE.ipynb`](75_100_SVM_MLP_incSMOTE.ipynb) — exploratory notebook.
+- [`svm_mlp_21_44_features_no_smote.ipynb`](svm_mlp_21_44_features_no_smote.ipynb) — exploratory notebook.
+- [`svm_mlp_75_100_features_smote.ipynb`](svm_mlp_75_100_features_smote.ipynb) — exploratory notebook.
 
 ## Scope and reproducibility
 
