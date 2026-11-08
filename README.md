@@ -180,3 +180,11 @@ This work uses the MIMIC-IV research ecosystem. Users should consult the officia
 ## Documentation by workstream
 
 The numbered folders contain detailed README files with file-level navigation and experiment scope. Start with [preprocessing](01_data_preprocessing/README.md), [feature selection](02_feature_selection/README.md), [model training](03_model_training/README.md), [analysis](04_model_analysis/README.md), [optimization](05_icu_optimization/README.md), [Streamlit](06_streamlit_frontend/README.md), [validation](07_validation/README.md), and [results](08_results/README.md).
+
+## Repository maintenance and experiment provenance
+
+- [Organization and contribution rules](docs/REPOSITORY_ORGANIZATION.md)
+- [Experiment index: renal-only, competing-risk, and neural phases](docs/EXPERIMENT_INDEX.md)
+- [Artifact duplication and safety audit](docs/ARTIFACT_AUDIT.md)
+
+Refactoring is intentionally conservative: historical scripts and deployed model artifacts are preserved until their import paths and dependencies have been verified.

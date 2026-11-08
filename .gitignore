@@ -42,3 +42,7 @@ local_mimic_data/
 local_data/
 *.xlsx
 *.xls
+
+# OS-generated metadata
+.DS_Store
+**/.DS_Store
