@@ -1,0 +1,4 @@
+strategy,mean_reserved_beds,mean_requests,mean_unmet_kidney,mean_unmet_background,mean_unmet_total,probability_any_unmet,mean_wait_hours,mean_occupancy,mean_unused_protected_bed_days
+fixed_reserve,3.0,107.34333333333333,0.0,0.0,0.0,0.0,2.4000001922955412e-08,0.3971235087399012,3.0
+forecast_reserve,2.9366666666666665,107.34333333333333,0.0,0.0,0.0,0.0,2.4000001922955412e-08,0.3971235087399012,2.9366666666666665
+reactive,0.0,107.34333333333333,0.0,0.0,0.0,0.0,2.4000001922955412e-08,0.3971235087399012,0.0
