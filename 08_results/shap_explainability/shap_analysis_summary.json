@@ -1,0 +1,20 @@
+{
+  "model": "Step 53 frozen timing-corrected XGBoost",
+  "features": 75,
+  "test_admissions": 22223,
+  "sampled_for_shap": 2000,
+  "threshold": 0.0315936878323555,
+  "confusion_matrix": {
+    "tn": 14659,
+    "fp": 6837,
+    "fn": 231,
+    "tp": 496
+  },
+  "shap_units": "raw model margin (log-odds)",
+  "notes": [
+    "Model and preprocessor were not retrained.",
+    "Test set has been examined in prior experiments; explanations are exploratory.",
+    "SHAP is associational, not causal.",
+    "Four after-discharge positive admissions remain pending review."
+  ]
+}
