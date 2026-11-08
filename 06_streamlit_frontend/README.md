@@ -49,7 +49,16 @@ The application requires the frozen Step 53 XGBoost model, preprocessing bundle 
 | [`final_model_metadata.json`](final_model_metadata.json) | final model metadata.json (supporting file) |
 | [`final_xgboost_75_model.json`](final_xgboost_75_model.json) | final xgboost 75 model.json (supporting file) |
 | [`requirements.txt`](requirements.txt) | requirements (feature list) |
+## Live Streamlit Application
 
+🔗 [Launch ICU Transfer Prediction & Crisis Capacity Management](https://58vgelnnmdyhrdcosbvtga.streamlit.app/)
+
+The application demonstrates:
+- ICU-transfer risk prediction using the final 75-feature XGBoost model
+- Patient-level SHAP explainability
+- ICU capacity stress testing and risk-based prioritization
+
+**Note:** This is a research demonstration, not a clinical decision-support tool.
 ## Reproducibility status
 
 This repository documents retrospective experiments. Access-controlled MIMIC-IV datasets and some fitted model artifacts are not included. The automated checks validate syntax and repository structure, not end-to-end reproduction or clinical safety. Different cohort definitions and evaluation splits must not be compared as a single leaderboard.
