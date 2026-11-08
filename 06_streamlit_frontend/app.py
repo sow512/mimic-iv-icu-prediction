@@ -21,7 +21,7 @@ STAT = {"first": "first value", "last": "latest value", "mean": "average", "mini
 
 @st.cache_resource(show_spinner="Loading Step 53 model...")
 def load_model():
-    options = [os.environ.get("ICU_MODEL_DIR"), APP_DIR / "model",
+    options = [os.environ.get("ICU_MODEL_DIR"), APP_DIR, APP_DIR / "model",
                APP_DIR.parent / "model training figures" / "expanded_lab_xgboost" / "step53_final_75_model"]
     folder = next((Path(p) for p in options if p and all((Path(p) / f).exists() for f in FILES)), None)
     if folder is None:
