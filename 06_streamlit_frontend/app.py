@@ -21,16 +21,49 @@ STAT = {"first": "first value", "last": "latest value", "mean": "average", "mini
 
 @st.cache_resource(show_spinner="Loading Step 53 model...")
 def load_model():
-    options = [os.environ.get("ICU_MODEL_DIR"), APP_DIR, APP_DIR / "model",
-               APP_DIR.parent / "model training figures" / "expanded_lab_xgboost" / "step53_final_75_model"]
-    folder = next((Path(p) for p in options if p and all((Path(p) / f).exists() for f in FILES)), None)
-    if folder is None:
-        raise FileNotFoundError("Put the 3 Step 53 model files in a folder named 'model' next to this file.")
-    model = XGBClassifier()
-    model.load_model(str(folder / FILES[0]))
-    bundle = joblib.load(folder / FILES[1])
-    metadata = json.loads((folder / FILES[2]).read_text(encoding="utf-8"))
-    return model, bundle, metadata
+    """Load the frozen model from the deployed app directory or its model subfolder."""
+    candidates = []
+    configured = os.environ.get("ICU_MODEL_DIR")
+    if configured:
+        candidates.append(Path(configured).expanduser())
+    candidates.extend([
+        APP_DIR / "model",
+        APP_DIR,
+        APP_DIR.parent / "model",
+        APP_DIR.parent / "model training figures" / "expanded_lab_xgboost" / "step53_final_75_model",
+    ])
+
+    checked = []
+    for folder in candidates:
+        folder = folder.resolve()
+        missing = [name for name in FILES if not (folder / name).is_file()]
+        checked.append((folder, missing))
+        if missing:
+            continue
+
+        # The artifacts must be real files, not empty uploads or Git LFS pointers.
+        for name in FILES:
+            path = folder / name
+            if path.stat().st_size < 200:
+                raise RuntimeError(
+                    f"{path} is unusually small ({path.stat().st_size} bytes). "
+                    "Check whether GitHub contains a Git LFS pointer or incomplete upload."
+                )
+        model = XGBClassifier()
+        model.load_model(str(folder / FILES[0]))
+        bundle = joblib.load(folder / FILES[1])
+        metadata = json.loads((folder / FILES[2]).read_text(encoding="utf-8"))
+        return model, bundle, metadata
+
+    details = "\n".join(
+        f"- {folder}: missing {', '.join(missing)}" for folder, missing in checked
+    )
+    raise FileNotFoundError(
+        "Could not find all three Step 53 model files.\n"
+        f"App directory: {APP_DIR}\n"
+        f"Checked locations:\n{details}\n"
+        "Check the deployed GitHub branch and exact file names (case-sensitive)."
+    )
 
 
 def preprocess(df, bundle):
@@ -201,7 +234,10 @@ st.caption("Research demonstration. Risk order is not clinical urgency, alert le
 try:
     model, bundle, metadata = load_model()
 except Exception as e:
-    st.error(str(e)); st.stop()
+    st.error(f"Model loading failed: {e}")
+    with st.expander("Deployment diagnostics"):
+        st.code(f"App directory: {APP_DIR}\nFiles in app directory: {sorted(p.name for p in APP_DIR.iterdir())}\nFiles in model directory: {sorted(p.name for p in (APP_DIR / 'model').iterdir()) if (APP_DIR / 'model').is_dir() else '(model folder not found)'}")
+    st.stop()
 threshold = float(metadata["selected_threshold"])
 tab1, tab2, tab3 = st.tabs(["1  Risk & stratification", "2  Why this risk? (SHAP)", "3  ICU crisis management"])
 
