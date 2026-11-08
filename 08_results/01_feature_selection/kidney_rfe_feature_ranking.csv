@@ -1,0 +1,61 @@
+feature,RFE_rank,selected
+admission_hour,1,True
+anion_gap_latest_value,1,True
+calcium_latest_value,1,True
+creatinine_latest_value,1,True
+glucose_latest_value,1,True
+hematocrit_latest_value,1,True
+pt_latest_value,1,True
+wbc_latest_value,1,True
+inr_count,1,True
+phosphate_count,1,True
+platelets_count,1,True
+bun_change,1,True
+wbc_change,1,True
+admission_type_DIRECT OBSERVATION,1,True
+admission_type_ELECTIVE,1,True
+admission_type_EU OBSERVATION,1,True
+admission_type_SURGICAL SAME DAY ADMISSION,1,True
+admission_type_URGENT,1,True
+admission_location_PHYSICIAN REFERRAL,1,True
+admission_location_TRANSFER FROM HOSPITAL,1,True
+age,2,False
+pt_change,2,False
+bicarbonate_change,3,False
+creatinine_change,3,False
+calcium_change,4,False
+hematocrit_change,4,False
+phosphate_latest_value,5,False
+platelets_latest_value,5,False
+bicarbonate_latest_value,6,False
+hematocrit_count,6,False
+glucose_count,7,False
+platelets_change,7,False
+bun_latest_value,8,False
+sodium_latest_value,8,False
+anion_gap_change,9,False
+glucose_change,9,False
+magnesium_latest_value,10,False
+admission_type_DIRECT EMER.,10,False
+phosphate_change,11,False
+rdw_change,11,False
+rdw_latest_value,12,False
+admission_type_OBSERVATION ADMIT,12,False
+admission_day,13,False
+inr_change,13,False
+potassium_latest_value,14,False
+magnesium_change,14,False
+potassium_count,15,False
+chloride_change,15,False
+potassium_change,16,False
+gender_M,16,False
+hemoglobin_change,17,False
+sodium_change,17,False
+admission_location_TRANSFER FROM SKILLED NURSING FACILITY,18,False
+admission_location_WALK-IN/SELF REFERRAL,18,False
+admission_location_PACU,19,False
+admission_location_PROCEDURE SITE,19,False
+weekend_admission,20,False
+admission_location_INTERNAL TRANSFER TO OR FROM PSYCH,20,False
+admission_location_CLINIC REFERRAL,21,False
+admission_location_INFORMATION NOT AVAILABLE,21,False
