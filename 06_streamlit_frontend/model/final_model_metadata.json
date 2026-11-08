@@ -1,0 +1,37 @@
+{
+  "model": "XGBoost",
+  "feature_count": 75,
+  "unique_lab_ids": 28,
+  "selected_threshold": 0.0315936878323555,
+  "recall_target": 0.7,
+  "validation_metrics": {
+    "auroc": 0.7555651445910319,
+    "auprc": 0.17290072865330625,
+    "recall": 0.7008928571428571,
+    "precision": 0.06962305986696231,
+    "specificity": 0.6786890267248641,
+    "tp": 314,
+    "fp": 4196,
+    "fn": 134,
+    "tn": 8863
+  },
+  "development_admissions": 66118,
+  "reserved_test_admissions": 22223,
+  "model_params": {
+    "n_estimators": 250,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "reg_lambda": 5,
+    "scale_pos_weight": 1.0,
+    "tree_method": "hist",
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "random_state": 42,
+    "n_jobs": 4
+  },
+  "data_source": "C:\\Users\\sowmy\\Downloads\\MIMIC-IV\\MIMIC_IV\\MIMIC_IV\\model training figures\\expanded_lab_xgboost\\step51_timing_corrected\\expanded_candidate_features_storetime_corrected.parquet",
+  "note": "Uses Step 51 storetime-corrected laboratory features. Threshold selected on development-only validation. Final model refitted on all development admissions. Threshold is provisional after refitting. Outcome review flags and early-discharge policy remain unresolved. No test evaluation performed."
+}
