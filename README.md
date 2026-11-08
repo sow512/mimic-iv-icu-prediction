@@ -129,6 +129,16 @@ python -m compileall -q 01_data_preprocessing 02_feature_selection 03_model_trai
 
 Browse the [curated aggregate results and nine-figure gallery](08_results/README.md), including model discrimination, calibration, SHAP feature attribution, hypothetical event capture, and Phase 30 neural-network diagnostics. The EBM experiment archive is separately indexed in [08_results/ebm_experiments](08_results/ebm_experiments/README.md). Figures come from different experiments and should not be interpreted as a single matched leaderboard.
 
+## Live Streamlit Application
+
+🔗 https://mhhaqtqmgxdhhfga7f5a6k.streamlit.app/
+
+The application demonstrates:
+- ICU-transfer risk prediction using the final 75-feature XGBoost model
+- Patient-level SHAP explainability
+- ICU capacity stress testing and risk-based prioritization
+
+**Note:** This is a research demonstration, not a clinical decision-support tool.
 ## Data access and privacy
 
 MIMIC-IV is a controlled-access clinical dataset. **No patient-level data, feature tables, labels, trained model artifacts, or prediction exports are included in this repository.** Obtain access through the dataset's official process and follow its data-use conditions. Keep restricted inputs and outputs outside version control and in approved storage.
