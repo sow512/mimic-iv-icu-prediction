@@ -51,7 +51,7 @@ The application requires the frozen Step 53 XGBoost model, preprocessing bundle 
 | [`requirements.txt`](requirements.txt) | requirements (feature list) |
 ## Live Streamlit Application
 
-🔗[ [Launch ICU Transfer Prediction & Crisis Capacity Management](https://58vgelnnmdyhrdcosbvtga.streamlit.app/)](https://mhhaqtqmgxdhhfga7f5a6k.streamlit.app/)
+https://mhhaqtqmgxdhhfga7f5a6k.streamlit.app/
 
 The application demonstrates:
 - ICU-transfer risk prediction using the final 75-feature XGBoost model
